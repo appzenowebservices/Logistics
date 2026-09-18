@@ -1,0 +1,43 @@
+# Production compose for ALMS logistics.
+# `.env` (same directory) provides values for BOTH build.args and the container.
+# Required in `.env`: DATABASE_URL, AUTH_SECRET
+# Optional: MONGODB_URI (defaults to DATABASE_URL), SKIP_ENV_VALIDATION
+#
+# Networking follows the infra convention: the shared external `web`
+# network that Caddy and the other live services are attached to, so
+# `reverse_proxy logistics-web:3000` resolves inside Caddy.
+services:
+  web:
+    build:
+      context: .
+      args:
+        DATABASE_URL: ${DATABASE_URL:-}
+        MONGODB_URI: ${MONGODB_URI:-${DATABASE_URL:-}}
+        AUTH_SECRET: ${AUTH_SECRET:-}
+        SKIP_ENV_VALIDATION: ${SKIP_ENV_VALIDATION:-}
+    image: logistics
+    container_name: logistics-web
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      HOSTNAME: "0.0.0.0"
+      PORT: 3000
+      DATABASE_URL: ${DATABASE_URL:-}
+      MONGODB_URI: ${MONGODB_URI:-${DATABASE_URL:-}}
+    networks:
+      - web
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    # Guard against thread-exhaustion crashes on small boxes
+    # ("pthread_create: Resource temporarily unavailable").
+    pids_limit: 4096
+
+networks:
+  web:
+    external: true

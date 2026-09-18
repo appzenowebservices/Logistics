@@ -4,7 +4,7 @@ import "../db/schema";
 
 async function initDb() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI!);
+    await mongoose.connect(process.env.DATABASE_URL || process.env.MONGODB_URI!);
     console.log("Connected to MongoDB");
 
     const db = mongoose.connection.db;

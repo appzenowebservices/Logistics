@@ -36,7 +36,7 @@ const MODEL_NAMES = [
 ];
 
 async function flush() {
-  await mongoose.connect(process.env.MONGODB_URI!);
+  await mongoose.connect(process.env.DATABASE_URL || process.env.MONGODB_URI!);
   for (const name of MODEL_NAMES) {
     try {
       const model = mongoose.models[name];

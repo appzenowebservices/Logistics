@@ -2,10 +2,10 @@ import mongoose from "mongoose";
 
 function getMongoUri() {
   const uri =
-    process.env.MONGODB_URI ||
     process.env.DATABASE_URL ||
+    process.env.MONGODB_URI ||
     // local dev fallback — keeps `next dev` / `next build` from crashing
-    // when env is missing; real deployments must set MONGODB_URI.
+    // when env is missing; real deployments must set DATABASE_URL.
     "mongodb://localhost:27017/alms_logistics";
   return uri;
 }
