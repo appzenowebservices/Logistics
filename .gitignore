@@ -7,7 +7,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-/package-lock.json
+# keep npm lockfile — required for `npm ci` in Docker
 /yarn.lock
 /pnpm-lock.yaml
 
