@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { trpc } from "@/lib/trpc";
 import PortalLayout from "@/components/portal/PortalLayout";
 import {
   Shield,
@@ -48,11 +47,25 @@ export default function LoginRoutePage() {
   const [loadingRole, setLoadingRole] = useState<string | null>(null);
   const [error, setError] = useState("");
 
-  const loginMutation = trpc.auth.login.useMutation();
-  const seedMutation = trpc.seed.run.useMutation();
+  // REST login (NextResponse cookies) — reliable Set-Cookie, unlike
+  // cookie writes inside the tRPC fetch handler.
+  async function postLogin(payload: { email?: string; password?: string; role?: string }) {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data?.success) {
+      throw new Error(data?.error || "Login failed");
+    }
+    return data;
+  }
 
   useEffect(() => {
-    seedMutation.mutate();
+    fetch("/api/seed", { method: "POST" }).catch(() => {
+      // seed is best-effort; login has its own demo fallback
+    });
   }, []);
 
   const handleStandardLogin = async (e: React.FormEvent) => {
@@ -61,10 +74,9 @@ export default function LoginRoutePage() {
     setError("");
 
     try {
-      const res = await loginMutation.mutateAsync({ email, password });
-      if (res.success) {
-        router.push("/dashboard");
-      }
+      await postLogin({ email, password });
+      router.push("/dashboard");
+      router.refresh();
     } catch (err: any) {
       setError(err?.message || "Login failed");
     } finally {
@@ -77,10 +89,9 @@ export default function LoginRoutePage() {
     setError("");
 
     try {
-      const res = await loginMutation.mutateAsync({ role: roleKey });
-      if (res.success) {
-        router.push("/dashboard");
-      }
+      await postLogin({ role: roleKey });
+      router.push("/dashboard");
+      router.refresh();
     } catch (err: any) {
       setError(err?.message || "Failed to login as selected role");
     } finally {

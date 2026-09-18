@@ -42,14 +42,14 @@ export function proxy(request: NextRequest) {
   
   // Check authentication
   if (!sessionCookie) {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("/login", request.url));
   }
   
   let user: { role?: string } | null = null;
   try {
     user = JSON.parse(sessionCookie);
   } catch {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("/login", request.url));
   }
   
   // Find the menu key for this route

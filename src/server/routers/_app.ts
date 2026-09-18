@@ -38,15 +38,25 @@ export const appRouter = router({
         })
       )
       .mutation(async ({ input }) => {
-        await seedDatabase();
+        // Never let seeding take down login (e.g. DB unreachable in prod).
+        try {
+          await seedDatabase();
+        } catch (error) {
+          console.error("Login seed skipped:", error);
+        }
 
         let targetUser: any = null;
         let demoMeta: any = null;
 
         if (input.role) {
           demoMeta = DEMO_USERS.find((u) => u.role === input.role) || DEMO_USERS[0];
-          const found = await User.findOne({ role: demoMeta.role }).limit(1).lean();
-          targetUser = found || {
+          try {
+            const found = await User.findOne({ role: demoMeta.role }).limit(1).lean();
+            targetUser = found || null;
+          } catch {
+            targetUser = null;
+          }
+          targetUser = targetUser || {
             _id: new (mongoose.Types.ObjectId as any)(),
             name: demoMeta.name,
             email: demoMeta.email,
@@ -54,12 +64,31 @@ export const appRouter = router({
             branchId: new (mongoose.Types.ObjectId as any)(),
           };
         } else if (input.email) {
-          const found = await User.findOne({ email: input.email }).lean();
-          if (!found) {
-            throw new Error("Invalid email or password");
+          try {
+            const found = await User.findOne({ email: input.email }).lean();
+            if (found) {
+              targetUser = found;
+            }
+          } catch {
+            targetUser = null;
           }
-          targetUser = found;
-          demoMeta = DEMO_USERS.find((u) => u.role === (targetUser as any).role) || DEMO_USERS[0];
+          if (!targetUser) {
+            // Demo fallback so portal creds always work even if seed/DB failed.
+            const demo = DEMO_USERS.find((u) => u.email === input.email);
+            if (!demo) {
+              throw new Error("Invalid email or password");
+            }
+            demoMeta = demo;
+            targetUser = {
+              _id: new (mongoose.Types.ObjectId as any)(),
+              name: demo.name,
+              email: demo.email,
+              role: demo.role,
+              branchId: new (mongoose.Types.ObjectId as any)(),
+            };
+          } else {
+            demoMeta = DEMO_USERS.find((u) => u.role === (targetUser as any).role) || DEMO_USERS[0];
+          }
         } else {
           throw new Error("Missing login credentials");
         }
@@ -75,7 +104,12 @@ export const appRouter = router({
         };
 
         const cookieStore = await cookies();
-        cookieStore.set("alms_session", JSON.stringify(sessionPayload), { path: "/" });
+        cookieStore.set("alms_session", JSON.stringify(sessionPayload), {
+          path: "/",
+          sameSite: "lax",
+          maxAge: 60 * 60 * 24 * 7,
+          httpOnly: true,
+        });
 
         return { success: true, user: sessionPayload };
       }),
