@@ -1,0 +1,77 @@
+# --- dependencies ---
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
+
+# --- next.js ---
+/.next/
+/out/
+/build
+/dist
+next-env.d.ts
+*.tsbuildinfo
+
+# --- production / testing ---
+/coverage
+/.turbo
+
+# --- env / secrets (keep example only) ---
+.env
+.env*.local
+.env*.development.local
+.env*.test.local
+.env*.production.local
+!.env.example
+oc.md
+*.pem
+*.key
+
+# --- logs / debug ---
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- OS ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# --- IDE / editors ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+
+# --- vercel ---
+.vercel
+
+# --- prisma ---
+/prisma/migrations
+# keep schema.prisma, don't ignore client output (generated on install)
+
+# --- misc local ---
+*.tgz
+.cache/

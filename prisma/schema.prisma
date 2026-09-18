@@ -1,0 +1,13 @@
+// Prisma datasource for T3 compliance.
+// Domain models live in Mongoose (src/db/schema.ts) — this file only
+// provides the Prisma client + connection so `prisma generate` / T3 env work.
+// If you later migrate collections to Prisma, add models here.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
