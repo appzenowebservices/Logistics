@@ -11,6 +11,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Small-VPS guard: cap Next build/static-gen workers so
+  // `Collecting page data using 23 workers` doesn't EAGAIN.
+  experimental: {
+    cpus: 2,
+  },
 };
 
 export default nextConfig;

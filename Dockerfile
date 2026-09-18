@@ -19,7 +19,8 @@ RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_TELEMETRY_DISABLED=1 \
+  NODE_OPTIONS="--max-old-space-size=2048"
 # Build-time env (used by env validation; NOT baked from a file —
 # compose passes these from the host `.env` via build.args).
 ARG DATABASE_URL=""
