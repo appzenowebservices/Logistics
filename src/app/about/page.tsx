@@ -7,7 +7,7 @@ import { Building2, Award, Users, MapPin } from "lucide-react";
 export default function AboutRoutePage() {
   return (
     <PortalLayout>
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f0f8ff]">
+      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-surface">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center space-y-3">
             <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase">

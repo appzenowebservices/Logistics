@@ -9,7 +9,7 @@ const TrackingMap = dynamic(() => import("@/app/tracking/TrackingMap"), { ssr: f
 export default function TrackingRoutePage() {
   return (
     <PortalLayout>
-      <div className="py-20 bg-[#f0f8ff] min-h-[70vh]">
+      <div className="py-20 bg-surface min-h-[70vh]">
         <TrackingMap />
       </div>
     </PortalLayout>

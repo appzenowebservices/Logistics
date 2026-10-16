@@ -1,0 +1,402 @@
+/* ==========================================================================
+   ALMS — Brand Theme (single source of truth)
+   --------------------------------------------------------------------------
+   Tailwind v4 is CSS-first: every token below becomes a real utility
+   (bg-primary-600, text-ink-muted, rounded-card, shadow-brand, ...).
+
+   IMPORTANT — never hardcode a brand hex in a component again.
+   Use a token utility (`bg-primary-600`) or the raw CSS var
+   (`var(--color-ink-muted)`) for inline styles / Leaflet popups.
+
+   Palette rationale (logistics / freight):
+     primary   · deep corporate navy-blue → trust, reliability, enterprise
+     secondary · steel teal               → support, telemetry, secondary UI
+     accent    · safety amber             → CTAs, highlights, movement
+     neutral   · slate                    → text, borders, surfaces
+   Semantic status colours stay meaningful and are NOT remapped:
+     emerald → success/available   amber → warning/maintenance
+     rose    → critical/cancelled  purple → info/special
+   ========================================================================== */
+
+@theme {
+  /* ------------------------------------------------------------------
+     PRIMARY — "Freight Navy". Chrome, buttons, links, focus rings.
+     ------------------------------------------------------------------ */
+  --color-primary-50: #eff5ff;
+  --color-primary-100: #dbe8fe;
+  --color-primary-200: #bfd7fe;
+  --color-primary-300: #93bbfd;
+  --color-primary-400: #609afa;
+  --color-primary-500: #3b79f6;
+  --color-primary-600: #2459eb;
+  --color-primary-700: #1d45d8;
+  --color-primary-800: #1e39af;
+  --color-primary-900: #1e3489;
+  --color-primary-950: #16214f;
+
+  /* ------------------------------------------------------------------
+     SECONDARY — "Steel Teal". Support actions, telemetry, data viz.
+     ------------------------------------------------------------------ */
+  --color-secondary-50: #eefdfd;
+  --color-secondary-100: #d2f8f9;
+  --color-secondary-200: #abf0f3;
+  --color-secondary-300: #6fe3e9;
+  --color-secondary-400: #2dcdd8;
+  --color-secondary-500: #11b0be;
+  --color-secondary-600: #118da0;
+  --color-secondary-700: #147182;
+  --color-secondary-800: #185c6a;
+  --color-secondary-900: #184d5a;
+  --color-secondary-950: #08323d;
+
+  /* ------------------------------------------------------------------
+     ACCENT — "Safety Amber". High-intent CTAs and emphasis.
+     ------------------------------------------------------------------ */
+  --color-accent-50: #fff9ed;
+  --color-accent-100: #fff1d4;
+  --color-accent-200: #ffdfa8;
+  --color-accent-300: #ffc771;
+  --color-accent-400: #ffa538;
+  --color-accent-500: #ff8a0f;
+  --color-accent-600: #f06d02;
+  --color-accent-700: #c75204;
+  --color-accent-800: #9e400c;
+  --color-accent-900: #7f370f;
+  --color-accent-950: #451a03;
+
+  /* ------------------------------------------------------------------
+     NAVY / MIDNIGHT — deeper blues used for gradient depth.
+     Kept as first-class ramps so hero banners stay rich, not flat.
+     ------------------------------------------------------------------ */
+  --color-navy-50: #f0f5fe;
+  --color-navy-100: #dde7fc;
+  --color-navy-200: #c3d6fa;
+  --color-navy-300: #9abdf6;
+  --color-navy-400: #6a9cf0;
+  --color-navy-500: #467de9;
+  --color-navy-600: #3060dd;
+  --color-navy-700: #274bc9;
+  --color-navy-800: #263ea3;
+  --color-navy-900: #243881;
+  --color-navy-950: #18234f;
+
+  --color-midnight-50: #f1f4fd;
+  --color-midnight-100: #dfe5fb;
+  --color-midnight-200: #c6d0f8;
+  --color-midnight-300: #9fb1f2;
+  --color-midnight-400: #7189e9;
+  --color-midnight-500: #5068df;
+  --color-midnight-600: #3b4cd2;
+  --color-midnight-700: #323cc0;
+  --color-midnight-800: #2e359c;
+  --color-midnight-900: #2b337c;
+  --color-midnight-950: #1a1d49;
+
+  /* ------------------------------------------------------------------
+     SURFACES & INK — app background, cards, borders, text.
+     ------------------------------------------------------------------ */
+  --color-surface: #f2f6fc;
+  --color-surface-muted: #e8eff8;
+  --color-surface-raised: #ffffff;
+  --color-line: #d9e3f0;
+  --color-ink: #0f1c2e;
+  --color-ink-muted: #5a6b82;
+  --color-ink-subtle: #8496ab;
+
+  /* ------------------------------------------------------------------
+     RADII & ELEVATION
+     ------------------------------------------------------------------ */
+  --radius-card: 1rem;
+  --radius-panel: 1.5rem;
+  --shadow-card: 0 1px 2px rgb(15 28 46 / 0.04), 0 8px 24px -12px rgb(15 28 46 / 0.14);
+  --shadow-brand: 0 10px 30px -12px rgb(36 89 235 / 0.45);
+  --shadow-accent: 0 10px 30px -12px rgb(240 109 2 / 0.45);
+}
+
+/* ==========================================================================
+   LEGACY ALIASES — non-breaking adoption
+   --------------------------------------------------------------------------
+   The existing UI was authored with Tailwind's `sky` / `blue` / `indigo` /
+   `cyan` utility families. We alias those families onto the brand ramps so
+   every existing class (bg-sky-600, from-blue-800, text-indigo-900, ...)
+   renders the new palette with zero markup churn.
+
+   `@theme inline` is the documented way to reference another theme token.
+   ========================================================================== */
+@theme inline {
+  /* sky → primary */
+  --color-sky-50: var(--color-primary-50);
+  --color-sky-100: var(--color-primary-100);
+  --color-sky-200: var(--color-primary-200);
+  --color-sky-300: var(--color-primary-300);
+  --color-sky-400: var(--color-primary-400);
+  --color-sky-500: var(--color-primary-500);
+  --color-sky-600: var(--color-primary-600);
+  --color-sky-700: var(--color-primary-700);
+  --color-sky-800: var(--color-primary-800);
+  --color-sky-900: var(--color-primary-900);
+  --color-sky-950: var(--color-primary-950);
+
+  /* blue → navy */
+  --color-blue-50: var(--color-navy-50);
+  --color-blue-100: var(--color-navy-100);
+  --color-blue-200: var(--color-navy-200);
+  --color-blue-300: var(--color-navy-300);
+  --color-blue-400: var(--color-navy-400);
+  --color-blue-500: var(--color-navy-500);
+  --color-blue-600: var(--color-navy-600);
+  --color-blue-700: var(--color-navy-700);
+  --color-blue-800: var(--color-navy-800);
+  --color-blue-900: var(--color-navy-900);
+  --color-blue-950: var(--color-navy-950);
+
+  /* indigo → midnight */
+  --color-indigo-50: var(--color-midnight-50);
+  --color-indigo-100: var(--color-midnight-100);
+  --color-indigo-200: var(--color-midnight-200);
+  --color-indigo-300: var(--color-midnight-300);
+  --color-indigo-400: var(--color-midnight-400);
+  --color-indigo-500: var(--color-midnight-500);
+  --color-indigo-600: var(--color-midnight-600);
+  --color-indigo-700: var(--color-midnight-700);
+  --color-indigo-800: var(--color-midnight-800);
+  --color-indigo-900: var(--color-midnight-900);
+  --color-indigo-950: var(--color-midnight-950);
+
+  /* cyan → secondary */
+  --color-cyan-50: var(--color-secondary-50);
+  --color-cyan-100: var(--color-secondary-100);
+  --color-cyan-200: var(--color-secondary-200);
+  --color-cyan-300: var(--color-secondary-300);
+  --color-cyan-400: var(--color-secondary-400);
+  --color-cyan-500: var(--color-secondary-500);
+  --color-cyan-600: var(--color-secondary-600);
+  --color-cyan-700: var(--color-secondary-700);
+  --color-cyan-800: var(--color-secondary-800);
+  --color-cyan-900: var(--color-secondary-900);
+  --color-cyan-950: var(--color-secondary-950);
+
+  /* Semantic aliases — preferred names for new code */
+  --color-brand: var(--color-primary-600);
+  --color-brand-strong: var(--color-primary-700);
+  --color-brand-soft: var(--color-primary-50);
+  --color-brand-foreground: #ffffff;
+
+  /* Geospatial marker palette — Leaflet divIcon pins & map popups.
+     Referenced from map components so map colours stay on-brand too. */
+  --color-geo-company: var(--color-rose-600);
+  --color-geo-branch: var(--color-primary-600);
+  --color-geo-warehouse: var(--color-purple-600);
+  --color-geo-vehicle: var(--color-emerald-600);
+  --color-geo-driver: var(--color-accent-600);
+  --color-geo-pincode: var(--color-secondary-600);
+  --color-geo-user: var(--color-ink-muted);
+
+  /* Vehicle status accents */
+  --color-status-online: var(--color-emerald-600);
+  --color-status-idle: var(--color-primary-600);
+  --color-status-offline: var(--color-accent-600);
+
+  /* Typography — next/font injects --font-roboto on <body> */
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+  }
+
+  ::selection {
+    background-color: var(--color-brand);
+    color: var(--color-brand-foreground);
+  }
+
+  /* Consistent, branded focus ring everywhere (a11y + polish) */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+
+  /* Branded scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-muted);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary-300);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-400);
+  }
+  * {
+    scrollbar-color: var(--color-primary-300) var(--color-surface-muted);
+    scrollbar-width: thin;
+  }
+}
+
+/* ==========================================================================
+   COMPONENT KIT
+   --------------------------------------------------------------------------
+   Reusable primitives so new screens don't re-invent spacing/colour.
+   Prefer these over ad-hoc gradient + shadow class soup.
+   ========================================================================== */
+@layer components {
+  /* --- Brand gradients (hero banners & primary surfaces) --- */
+  .brand-gradient {
+    background-image: linear-gradient(
+      90deg,
+      var(--color-primary-600),
+      var(--color-navy-600)
+    );
+  }
+
+  .brand-gradient-deep {
+    background-image: linear-gradient(
+      90deg,
+      var(--color-primary-700),
+      var(--color-navy-800),
+      var(--color-midnight-900)
+    );
+  }
+
+  .brand-gradient-subtle {
+    background-image: linear-gradient(
+      135deg,
+      var(--color-primary-50),
+      var(--color-surface-raised)
+    );
+  }
+
+  /* --- Buttons --- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.625rem 1.125rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 150ms ease, color 150ms ease,
+      box-shadow 150ms ease, transform 150ms ease;
+  }
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary-600);
+    color: var(--color-brand-foreground);
+    box-shadow: var(--shadow-brand);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--color-primary-500);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-secondary-600);
+    color: var(--color-brand-foreground);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    background-color: var(--color-secondary-500);
+  }
+
+  .btn-accent {
+    background-color: var(--color-accent-500);
+    color: #3a1d00;
+    box-shadow: var(--shadow-accent);
+  }
+  .btn-accent:hover:not(:disabled) {
+    background-color: var(--color-accent-400);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-primary-700);
+    border: 1px solid var(--color-line);
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background-color: var(--color-primary-50);
+  }
+
+  /* --- Surfaces --- */
+  .surface-card {
+    background-color: var(--color-surface-raised);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    background-color: var(--color-surface-raised);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-panel);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* --- Forms --- */
+  .input-field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-line);
+    background-color: var(--color-surface);
+    padding: 0.625rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .input-field::placeholder {
+    color: var(--color-ink-subtle);
+  }
+  .input-field:focus {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 0;
+    border-color: transparent;
+  }
+
+  .field-label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  /* --- Section heading used across dashboards --- */
+  .eyebrow {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: color-mix(in oklab, var(--color-primary-600) 12%, transparent);
+    color: var(--color-primary-700);
+  }
+}

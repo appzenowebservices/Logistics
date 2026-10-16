@@ -8,7 +8,7 @@ import { Cpu, ShieldCheck, CheckCircle2 } from "lucide-react";
 export default function FleetShowcaseRoutePage() {
   return (
     <PortalLayout>
-      <div className="py-12 bg-[#f0f8ff]">
+      <div className="py-12 bg-surface">
         <FleetShowcase />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="bg-white rounded-3xl p-8 border border-sky-100 shadow-xl grid grid-cols-1 md:grid-cols-3 gap-8 text-center">

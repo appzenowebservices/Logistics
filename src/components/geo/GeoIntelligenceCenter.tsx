@@ -26,14 +26,16 @@ import {
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+/* Marker colours come from the brand theme (src/styles/theme.css) so the
+   geospatial layer stays on-palette. These resolve inside Leaflet's DOM. */
 const MARKER_COLORS: Record<string, string> = {
-  company: "#dc2626",
-  branch: "#2563eb",
-  warehouse: "#9333ea",
-  vehicle: "#16a34a",
-  driver: "#ea580c",
-  pincode: "#0891b2",
-  user: "#64748b",
+  company: "var(--color-geo-company)",
+  branch: "var(--color-geo-branch)",
+  warehouse: "var(--color-geo-warehouse)",
+  vehicle: "var(--color-geo-vehicle)",
+  driver: "var(--color-geo-driver)",
+  pincode: "var(--color-geo-pincode)",
+  user: "var(--color-geo-user)",
 };
 
 const MARKER_ICONS: Record<string, string> = {
@@ -197,7 +199,7 @@ export default function GeoIntelligenceCenter() {
     const entitiesWithLoc = results.filter((r) => r.lat && r.lng);
 
     entitiesWithLoc.forEach((entity) => {
-      const color = MARKER_COLORS[entity.type] || "#64748b";
+      const color = MARKER_COLORS[entity.type] || "var(--color-geo-user)";
       const icon = MARKER_ICONS[entity.type] || "📍";
 
       const markerHtml = `<div style="
@@ -221,21 +223,21 @@ export default function GeoIntelligenceCenter() {
       })
         .addTo(mapInstanceRef.current!)
         .bindPopup(
-          `<div style="font-size:12px;min-width:200px;font-family:system-ui;padding:2px;">
+          `<div style="font-size:12px;min-width:200px;font-family:var(--font-sans);padding:2px;">
             <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
               <div style="width:10px;height:10px;background:${color};border-radius:50%;"></div>
-              <p style="font-weight:bold;color:#1e293b;margin:0;text-transform:capitalize;">${entity.type}</p>
+              <p style="font-weight:bold;color:var(--color-ink);margin:0;text-transform:capitalize;">${entity.type}</p>
             </div>
-            <p style="font-weight:bold;color:#0f172a;margin:0 0 3px 0;font-size:13px;">${entity.name}</p>
-            <p style="color:#64748b;margin:0 0 6px 0;font-size:11px;">${entity.subtitle}</p>
+            <p style="font-weight:bold;color:var(--color-ink);margin:0 0 3px 0;font-size:13px;">${entity.name}</p>
+            <p style="color:var(--color-ink-muted);margin:0 0 6px 0;font-size:11px;">${entity.subtitle}</p>
             ${entity.meta ? Object.entries(entity.meta).filter(([_, v]) => v).map(([k, v]) => `
-              <div style="display:flex;justify-content:space-between;padding:2px 0;border-top:1px solid #f1f5f9;">
-                <span style="color:#94a3b8;text-transform:capitalize;font-size:10px;">${k.replace(/([A-Z])/g, ' $1').trim()}</span>
-                <span style="color:#334155;font-weight:500;font-size:10px;">${typeof v === 'object' ? JSON.stringify(v) : v}</span>
+              <div style="display:flex;justify-content:space-between;padding:2px 0;border-top:1px solid var(--color-surface-muted);">
+                <span style="color:var(--color-ink-subtle);text-transform:capitalize;font-size:10px;">${k.replace(/([A-Z])/g, ' $1').trim()}</span>
+                <span style="color:var(--color-ink-muted);font-weight:500;font-size:10px;">${typeof v === 'object' ? JSON.stringify(v) : v}</span>
               </div>
             `).join('') : ''}
-            <div style="margin-top:6px;padding-top:4px;border-top:1px solid #f1f5f9;">
-              <span style="display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:999px;background:${entity.status === 'active' ? '#dcfce7' : '#f1f5f9'};color:${entity.status === 'active' ? '#166534' : '#64748b'};font-size:9px;font-weight:bold;text-transform:capitalize;">
+            <div style="margin-top:6px;padding-top:4px;border-top:1px solid var(--color-surface-muted);">
+              <span style="display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:999px;background:${entity.status === 'active' ? 'var(--color-emerald-100)' : 'var(--color-surface-muted)'};color:${entity.status === 'active' ? 'var(--color-emerald-800)' : 'var(--color-ink-muted)'};font-size:9px;font-weight:bold;text-transform:capitalize;">
                 ${entity.status}
               </span>
             </div>

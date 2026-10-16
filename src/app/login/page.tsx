@@ -145,7 +145,7 @@ export default function LoginRoutePage() {
 
   return (
     <PortalLayout>
-      <div className="py-12 px-4 sm:px-6 lg:px-8 bg-[#f0f8ff] min-h-[calc(100vh-200px)] flex flex-col justify-center">
+      <div className="py-12 px-4 sm:px-6 lg:px-8 bg-surface min-h-[calc(100vh-200px)] flex flex-col justify-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-10">
             <span className="px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase tracking-wider shadow-sm">

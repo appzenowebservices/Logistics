@@ -73,10 +73,10 @@ export default function OpenStreetMapPicker({
       const marker = L.marker([parts.lat, parts.lng], { draggable: !readOnly }).addTo(mapInstanceRef.current);
       marker.bindPopup(
         `<div style="font-size:12px;min-width:180px;">
-          <p style="font-weight:bold;color:#1e293b;">${parts.display_name || "Selected Location"}</p>
-          ${parts.city ? `<p style="color:#64748b;">City: ${parts.city}</p>` : ""}
-          ${parts.state ? `<p style="color:#64748b;">State: ${parts.state}</p>` : ""}
-          ${parts.pincode ? `<p style="color:#64748b;">Pincode: ${parts.pincode}</p>` : ""}
+          <p style="font-weight:bold;color:var(--color-ink);">${parts.display_name || "Selected Location"}</p>
+          ${parts.city ? `<p style="color:var(--color-ink-muted);">City: ${parts.city}</p>` : ""}
+          ${parts.state ? `<p style="color:var(--color-ink-muted);">State: ${parts.state}</p>` : ""}
+          ${parts.pincode ? `<p style="color:var(--color-ink-muted);">Pincode: ${parts.pincode}</p>` : ""}
         </div>`
       );
       markerRef.current = marker;
@@ -295,10 +295,10 @@ export default function OpenStreetMapPicker({
           const marker = L.marker([center.lat, center.lng], { draggable: true }).addTo(mapInstanceRef.current);
           marker.bindPopup(
             `<div style="font-size:12px;min-width:180px;">
-              <p style="font-weight:bold;color:#1e293b;">${parts.display_name || "Selected Location"}</p>
-              ${parts.city ? `<p style="color:#64748b;">City: ${parts.city}</p>` : ""}
-              ${parts.state ? `<p style="color:#64748b;">State: ${parts.state}</p>` : ""}
-              ${parts.pincode ? `<p style="color:#64748b;">Pincode: ${parts.pincode}</p>` : ""}
+              <p style="font-weight:bold;color:var(--color-ink);">${parts.display_name || "Selected Location"}</p>
+              ${parts.city ? `<p style="color:var(--color-ink-muted);">City: ${parts.city}</p>` : ""}
+              ${parts.state ? `<p style="color:var(--color-ink-muted);">State: ${parts.state}</p>` : ""}
+              ${parts.pincode ? `<p style="color:var(--color-ink-muted);">Pincode: ${parts.pincode}</p>` : ""}
             </div>`
           );
           markerRef.current = marker;

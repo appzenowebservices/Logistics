@@ -51,7 +51,7 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section className="py-20 bg-[#f0f8ff] px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="py-20 bg-surface px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-extrabold uppercase tracking-wider">

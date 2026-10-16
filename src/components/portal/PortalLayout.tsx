@@ -11,7 +11,7 @@ interface PortalLayoutProps {
 
 export default function PortalLayout({ children }: PortalLayoutProps) {
   return (
-    <div className="min-h-screen bg-[#f0f8ff] text-slate-800 flex flex-col font-sans selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen bg-surface text-ink flex flex-col font-sans selection:bg-brand selection:text-white">
       <Topbar />
       <PortalNavbar />
       <main className="flex-1">{children}</main>

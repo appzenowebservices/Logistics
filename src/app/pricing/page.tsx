@@ -105,7 +105,7 @@ const addOns = [
 export default function PricingPage() {
   return (
     <PortalLayout>
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f0f8ff]">
+      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-surface">
         <div className="max-w-7xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-4">

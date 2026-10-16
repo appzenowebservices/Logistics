@@ -14,7 +14,7 @@ export default function ContactRoutePage() {
 
   return (
     <PortalLayout>
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f0f8ff]">
+      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-surface">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5 space-y-6">
             <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase">

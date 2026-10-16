@@ -9,7 +9,7 @@ export default function Error({
 }) {
   return (
     <html lang="en">
-      <body className="flex items-center justify-center min-h-screen bg-[#f0f8ff] text-slate-800">
+      <body className="flex items-center justify-center min-h-screen bg-surface text-ink">
         <div className="text-center p-8">
           <h1 className="text-2xl font-bold text-red-600 mb-4">Connection Error</h1>
           <p className="text-slate-600 mb-2 text-sm whitespace-pre-wrap">{error.message}</p>

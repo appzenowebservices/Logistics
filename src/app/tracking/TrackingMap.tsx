@@ -64,11 +64,11 @@ export default function TrackingMap() {
         .addTo(mapInstanceRef.current!)
         .bindPopup(
           `<div style="font-size:12px;min-width:180px;">
-            <p style="font-weight:bold;color:#1e293b;">${vehicle.id}</p>
-            <p style="color:#64748b;">Route: ${vehicle.route}</p>
-            <p style="color:#64748b;">Driver: ${vehicle.driver}</p>
-            <p style="color:#64748b;">Status: <span style="font-weight:bold;color:${vehicle.status === 'in_transit' ? '#059669' : vehicle.status === 'available' ? '#0284c7' : '#d97706'};">${vehicle.status.replace('_', ' ')}</span></p>
-            ${vehicle.speed > 0 ? `<p style="color:#64748b;">Speed: ${vehicle.speed} km/h</p>` : ""}
+            <p style="font-weight:bold;color:var(--color-ink);">${vehicle.id}</p>
+            <p style="color:var(--color-ink-muted);">Route: ${vehicle.route}</p>
+            <p style="color:var(--color-ink-muted);">Driver: ${vehicle.driver}</p>
+            <p style="color:var(--color-ink-muted);">Status: <span style="font-weight:bold;color:${vehicle.status === 'in_transit' ? 'var(--color-status-online)' : vehicle.status === 'available' ? 'var(--color-status-idle)' : 'var(--color-status-offline)'};">${vehicle.status.replace('_', ' ')}</span></p>
+            ${vehicle.speed > 0 ? `<p style="color:var(--color-ink-muted);">Speed: ${vehicle.speed} km/h</p>` : ""}
           </div>`
         );
       marker.on("click", () => {

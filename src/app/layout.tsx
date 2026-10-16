@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Roboto } from "next/font/google";
 import { TrpcProvider } from "@/components/providers/TrpcProvider";
@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   description: "Smart Logistics • Smart Fleet • Smart Business ERP Portal",
 };
 
+// Mobile browser chrome adopts the brand primary (see src/styles/theme.css)
+export const viewport: Viewport = {
+  themeColor: "#2459eb",
+};
+
 export const dynamic = "force-dynamic";
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
@@ -27,7 +32,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
 
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${roboto.variable} bg-[#f0f8ff] text-slate-800 antialiased min-h-screen selection:bg-sky-500 selection:text-white`}>
+      <body className={`${roboto.className} ${roboto.variable} bg-surface text-ink antialiased min-h-screen selection:bg-brand selection:text-white`}>
         <TrpcProvider>{children}</TrpcProvider>
       </body>
     </html>

@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#f0f8ff] flex text-slate-800 font-sans antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-surface flex text-ink font-sans antialiased overflow-x-hidden">
       {/* Sidebar */}
       <Sidebar
         isOpen={sidebarOpen}

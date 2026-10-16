@@ -22,7 +22,7 @@ export default function FullWidthLayout({ children }: FullWidthLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#f0f8ff] flex text-slate-800 font-sans antialiased overflow-hidden">
+    <div className="min-h-screen bg-surface flex text-ink font-sans antialiased overflow-hidden">
       <Sidebar
         isOpen={sidebarOpen}
         onCloseMobile={() => setSidebarOpen(false)}
