@@ -18,7 +18,7 @@ export default function Error({
           )}
           <button
             onClick={() => reset()}
-            className="px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600"
+            className="px-4 py-2 bg-primary-500 text-white rounded hover:bg-primary-600"
           >
             Try again
           </button>

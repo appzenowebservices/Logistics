@@ -103,42 +103,42 @@ export default function LoginRoutePage() {
     {
       title: "Executive & HQ Governance",
       roles: [
-        { key: "super_admin", label: "Super Admin", desc: "Complete ERP Portal & System Settings", icon: Shield, color: "from-sky-600 to-blue-700" },
-        { key: "executive_management", label: "Executive (COO/CXO)", desc: "Business KPIs, Revenue & Fleet Analytics", icon: BarChartIcon, color: "from-blue-600 to-indigo-700" },
-        { key: "admin", label: "General Admin", desc: "User Master, Access & System Config", icon: Shield, color: "from-sky-500 to-cyan-600" },
+        { key: "super_admin", label: "Super Admin", desc: "Complete ERP Portal & System Settings", icon: Shield, color: "bg-primary-600" },
+        { key: "executive_management", label: "Executive (COO/CXO)", desc: "Business KPIs, Revenue & Fleet Analytics", icon: BarChartIcon, color: "bg-navy-600" },
+        { key: "admin", label: "General Admin", desc: "User Master, Access & System Config", icon: Shield, color: "bg-primary-500" },
       ]
     },
     {
       title: "Regional & Branch Leadership",
       roles: [
-        { key: "regional_manager", label: "Regional Manager", desc: "State Hubs, Fleet Allocation & Margin Reports", icon: Building2, color: "from-cyan-600 to-teal-700" },
-        { key: "branch_manager", label: "Branch Manager", desc: "Today's Bookings, Local Hub Dispatch & Expenses", icon: MapPin, color: "from-teal-600 to-emerald-700" },
+        { key: "regional_manager", label: "Regional Manager", desc: "State Hubs, Fleet Allocation & Margin Reports", icon: Building2, color: "bg-secondary-600" },
+        { key: "branch_manager", label: "Branch Manager", desc: "Today's Bookings, Local Hub Dispatch & Expenses", icon: MapPin, color: "bg-teal-600" },
       ]
     },
     {
       title: "Logistics Operations & Fleet",
       roles: [
-        { key: "dispatcher", label: "Dispatcher", desc: "Trip Planning, Route Optimization & Manifests", icon: Briefcase, color: "from-blue-500 to-sky-600" },
-        { key: "fleet_manager", label: "Fleet Manager", desc: "Vehicle Master, Maintenance, FASTag & GPS", icon: Truck, color: "from-sky-600 to-blue-800" },
-        { key: "warehouse_manager", label: "Warehouse Manager", desc: "Barcode/QR Scanning, Racks & Stock Cycle", icon: Warehouse, color: "from-emerald-600 to-teal-800" },
-        { key: "security_guard", label: "Security Guard", desc: "Warehouse Gate Entry/Exit & Material Check", icon: Lock, color: "from-slate-700 to-slate-900" },
+        { key: "dispatcher", label: "Dispatcher", desc: "Trip Planning, Route Optimization & Manifests", icon: Briefcase, color: "bg-navy-500" },
+        { key: "fleet_manager", label: "Fleet Manager", desc: "Vehicle Master, Maintenance, FASTag & GPS", icon: Truck, color: "bg-primary-600" },
+        { key: "warehouse_manager", label: "Warehouse Manager", desc: "Barcode/QR Scanning, Racks & Stock Cycle", icon: Warehouse, color: "bg-emerald-600" },
+        { key: "security_guard", label: "Security Guard", desc: "Warehouse Gate Entry/Exit & Material Check", icon: Lock, color: "bg-slate-700" },
       ]
     },
     {
       title: "Field & Client Portals",
       roles: [
-        { key: "driver", label: "Driver App (PWA)", desc: "Assigned Trips, Navigation & POD Signature Upload", icon: Truck, color: "from-amber-600 to-orange-700" },
-        { key: "customer", label: "Customer Portal", desc: "Live GPS Tracking, Shipment Booking & POD", icon: UserCheck, color: "from-indigo-600 to-purple-700" },
-        { key: "vendor", label: "Vendor Portal", desc: "Assigned Vehicles, Trips & Payment Settlements", icon: Users, color: "from-purple-600 to-violet-800" },
+        { key: "driver", label: "Driver App (PWA)", desc: "Assigned Trips, Navigation & POD Signature Upload", icon: Truck, color: "bg-amber-600" },
+        { key: "customer", label: "Customer Portal", desc: "Live GPS Tracking, Shipment Booking & POD", icon: UserCheck, color: "bg-midnight-600" },
+        { key: "vendor", label: "Vendor Portal", desc: "Assigned Vehicles, Trips & Payment Settlements", icon: Users, color: "bg-purple-600" },
       ]
     },
     {
       title: "Finance, HR & CRM Services",
       roles: [
-        { key: "accountant", label: "Accountant", desc: "GST, TDS, Ledger, Cash Book & Freight Bills", icon: ReceiptIndianRupee, color: "from-emerald-700 to-green-800" },
-        { key: "hr", label: "HR Manager", desc: "Driver & Employee Attendance, Payroll & Leaves", icon: Users, color: "from-rose-600 to-pink-700" },
-        { key: "crm_executive", label: "CRM Executive", desc: "Leads, Quotations, Rate Cards & Follow-ups", icon: Sparkles, color: "from-amber-500 to-rose-600" },
-        { key: "support_executive", label: "Support Executive", desc: "Tickets, Live Status & Customer Escalations", icon: UserCheck, color: "from-sky-600 to-indigo-600" },
+        { key: "accountant", label: "Accountant", desc: "GST, TDS, Ledger, Cash Book & Freight Bills", icon: ReceiptIndianRupee, color: "bg-emerald-700" },
+        { key: "hr", label: "HR Manager", desc: "Driver & Employee Attendance, Payroll & Leaves", icon: Users, color: "bg-rose-600" },
+        { key: "crm_executive", label: "CRM Executive", desc: "Leads, Quotations, Rate Cards & Follow-ups", icon: Sparkles, color: "bg-amber-500" },
+        { key: "support_executive", label: "Support Executive", desc: "Tickets, Live Status & Customer Escalations", icon: UserCheck, color: "bg-primary-600" },
       ]
     }
   ];
@@ -148,7 +148,7 @@ export default function LoginRoutePage() {
       <div className="py-12 px-4 sm:px-6 lg:px-8 bg-surface min-h-[calc(100vh-200px)] flex flex-col justify-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-10">
-            <span className="px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase tracking-wider shadow-sm">
+            <span className="px-3.5 py-1.5 rounded-full bg-primary-100 text-primary-800 text-xs font-black uppercase tracking-wider shadow-sm">
               Role-Based Access Control (RBAC) Node.js Portal
             </span>
             <h1 className="text-3xl sm:text-5xl font-black text-slate-900 mt-3">
@@ -161,9 +161,9 @@ export default function LoginRoutePage() {
 
           <div className="flex flex-col lg:flex-row gap-6 items-stretch">
             {/* Standard Email Login Form */}
-            <div className="w-full lg:w-[420px] shrink-0 bg-white rounded-3xl p-6 sm:p-8 border border-sky-100 shadow-xl">
+            <div className="w-full lg:w-[420px] shrink-0 bg-white rounded-3xl p-6 sm:p-8 border border-primary-100 shadow-xl">
               <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2 mb-2">
-                <Lock className="w-5 h-5 text-sky-600" /> Account Credential Login
+                <Lock className="w-5 h-5 text-primary-600" /> Account Credential Login
               </h2>
               <p className="text-xs text-slate-500 mb-6">
                 Enter your official email or select any role from the instant switcher grid.
@@ -185,7 +185,7 @@ export default function LoginRoutePage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="superadmin@alms.com"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-10 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-10 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
@@ -199,7 +199,7 @@ export default function LoginRoutePage() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-10 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-10 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
@@ -207,7 +207,7 @@ export default function LoginRoutePage() {
                 <button
                   type="submit"
                   disabled={loadingRole === "standard"}
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 font-bold text-sm text-white shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
+                  className="w-full py-3.5 rounded-xl bg-primary-600  font-bold text-sm text-white shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
                 >
                   {loadingRole === "standard" ? "Authenticating via tRPC..." : "Sign In to Portal"}
                   <ArrowRight className="w-4 h-4" />
@@ -229,7 +229,7 @@ export default function LoginRoutePage() {
             </div>
 
             {/* Role Access Panel */}
-            <div className="flex-1 min-w-0 bg-white rounded-3xl p-6 border border-sky-100 shadow-xl flex flex-col">
+            <div className="flex-1 min-w-0 bg-white rounded-3xl p-6 border border-primary-100 shadow-xl flex flex-col">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="font-bold text-base text-slate-900 flex items-center gap-2">
@@ -245,7 +245,7 @@ export default function LoginRoutePage() {
               <div className="space-y-6 max-h-[640px] overflow-y-auto pr-2">
                 {roleCategories.map((category) => (
                   <div key={category.title} className="space-y-2.5">
-                    <h4 className="text-xs font-bold text-sky-800 uppercase tracking-wider border-b border-sky-200 pb-1">
+                    <h4 className="text-xs font-bold text-primary-800 uppercase tracking-wider border-b border-primary-200 pb-1">
                       {category.title}
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
@@ -256,7 +256,7 @@ export default function LoginRoutePage() {
                             key={r.key}
                             onClick={() => handleRoleQuickLogin(r.key)}
                             disabled={isLoading}
-                            className={`text-left p-3.5 rounded-2xl bg-gradient-to-br ${r.color} hover:brightness-110 transition-all shadow-md border border-white/20 group relative overflow-hidden flex flex-col justify-between cursor-pointer`}
+                            className={`text-left p-3.5 rounded-2xl ${r.color} hover:brightness-110 transition-all shadow-md border border-white/20 group relative overflow-hidden flex flex-col justify-between cursor-pointer`}
                           >
                             <div className="flex items-start justify-between">
                               <span className="font-extrabold text-sm text-white group-hover:translate-x-0.5 transition-transform">

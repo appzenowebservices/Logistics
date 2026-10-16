@@ -10,7 +10,7 @@ export default function WarehousePage() {
   return (
     <DashboardLayout>
       <div className="space-y-6 animate-in fade-in">
-        <div className="bg-gradient-to-r from-emerald-900 to-teal-800 rounded-3xl p-6 text-white shadow-xl">
+        <div className="bg-emerald-900 rounded-3xl p-6 text-white shadow-xl">
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
             Module 17 • Warehousing
           </span>
@@ -19,7 +19,7 @@ export default function WarehousePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm space-y-4">
+          <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm space-y-4">
             <h3 className="font-bold text-base text-slate-900 flex items-center gap-2">
               <QrCode className="w-5 h-5 text-emerald-600" /> Stock Inbound Scanner
             </h3>
@@ -36,7 +36,7 @@ export default function WarehousePage() {
             {scanResult && <p className="text-xs font-bold text-emerald-700 bg-emerald-50 p-3 rounded-xl">✅ {scanResult}</p>}
           </div>
 
-          <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm space-y-4">
+          <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm space-y-4">
             <h3 className="font-bold text-base text-slate-900">Bin Occupancy Status</h3>
             <div className="space-y-3 text-xs">
               <div className="flex justify-between font-semibold">

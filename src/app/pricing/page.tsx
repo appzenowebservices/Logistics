@@ -109,7 +109,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto space-y-16">
           {/* Header */}
           <div className="text-center space-y-4">
-            <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase">
+            <span className="px-3 py-1 rounded-full bg-primary-100 text-primary-800 text-xs font-black uppercase">
               Simple, Usage-Based Pricing
             </span>
             <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight">
@@ -132,12 +132,12 @@ export default function PricingPage() {
                 key={plan.code}
                 className={`relative bg-white rounded-3xl border-2 p-6 flex flex-col ${
                   plan.highlighted
-                    ? "border-sky-500 shadow-2xl shadow-sky-500/20 scale-[1.02]"
+                    ? "border-primary-500 shadow-2xl shadow-primary-500/20 scale-[1.02]"
                     : "border-slate-200 shadow-lg"
                 }`}
               >
                 {plan.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-[10px] font-black uppercase rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary-500 text-white text-[10px] font-black uppercase rounded-full">
                     Most Popular
                   </div>
                 )}
@@ -166,19 +166,19 @@ export default function PricingPage() {
 
                   <div className="space-y-1.5 text-[11px] text-slate-600 font-medium">
                     <div className="flex items-center gap-2">
-                      <Zap className="w-3.5 h-3.5 text-sky-500" />
+                      <Zap className="w-3.5 h-3.5 text-primary-500" />
                       <span>{plan.limits.users === -1 ? "Unlimited" : plan.limits.users} Users</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Building2 className="w-3.5 h-3.5 text-sky-500" />
+                      <Building2 className="w-3.5 h-3.5 text-primary-500" />
                       <span>{plan.limits.branches === -1 ? "Unlimited" : plan.limits.branches} Branches</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Phone className="w-3.5 h-3.5 text-sky-500" />
+                      <Phone className="w-3.5 h-3.5 text-primary-500" />
                       <span>{plan.limits.vehicles === -1 ? "Unlimited" : plan.limits.vehicles} Vehicles</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Zap className="w-3.5 h-3.5 text-sky-500" />
+                      <Zap className="w-3.5 h-3.5 text-primary-500" />
                       <span>{plan.limits.drivers === -1 ? "Unlimited" : plan.limits.drivers} Drivers</span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -217,7 +217,7 @@ export default function PricingPage() {
                     href={plan.code === "enterprise" ? "/contact" : "/login"}
                     className={`w-full py-3 rounded-xl text-xs font-black flex items-center justify-center gap-2 transition-all ${
                       plan.highlighted
-                        ? "bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-500/25 hover:from-sky-400 hover:to-blue-500"
+                        ? "bg-primary-500 text-white shadow-lg shadow-primary-500/25 "
                         : "bg-slate-900 text-white hover:bg-slate-800"
                     }`}
                   >
@@ -251,7 +251,7 @@ export default function PricingPage() {
                         <td className="px-6 py-3.5 font-semibold text-slate-900">{addon.name}</td>
                         <td className="px-6 py-3.5 text-right font-bold text-slate-900">₹{addon.price.toLocaleString()}</td>
                         <td className="px-6 py-3.5 text-center">
-                          <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-sky-50 text-sky-700 text-[10px] font-bold">
+                          <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-primary-50 text-primary-700 text-[10px] font-bold">
                             <Zap className="w-3 h-3" /> Any Plan
                           </span>
                         </td>
@@ -275,10 +275,10 @@ export default function PricingPage() {
                   <thead>
                     <tr className="bg-slate-50 border-b border-slate-200">
                       <th className="px-6 py-4 font-black text-slate-700 uppercase tracking-wider">Module</th>
-                      <th className="px-4 py-4 font-black text-sky-700 uppercase tracking-wider text-center">Starter</th>
-                      <th className="px-4 py-4 font-black text-sky-700 uppercase tracking-wider text-center">Professional</th>
-                      <th className="px-4 py-4 font-black text-sky-700 uppercase tracking-wider text-center">Business</th>
-                      <th className="px-4 py-4 font-black text-sky-700 uppercase tracking-wider text-center">Enterprise</th>
+                      <th className="px-4 py-4 font-black text-primary-700 uppercase tracking-wider text-center">Starter</th>
+                      <th className="px-4 py-4 font-black text-primary-700 uppercase tracking-wider text-center">Professional</th>
+                      <th className="px-4 py-4 font-black text-primary-700 uppercase tracking-wider text-center">Business</th>
+                      <th className="px-4 py-4 font-black text-primary-700 uppercase tracking-wider text-center">Enterprise</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
@@ -312,13 +312,13 @@ export default function PricingPage() {
           </div>
 
           {/* CTA */}
-          <div className="text-center space-y-4 bg-gradient-to-r from-sky-600 to-blue-700 rounded-3xl p-12 text-white">
+          <div className="text-center space-y-4 bg-primary-600 rounded-3xl p-12 text-white">
             <h2 className="text-3xl font-black">Ready to Transform Your Logistics?</h2>
-            <p className="text-sky-100 text-sm max-w-xl mx-auto">
+            <p className="text-primary-100 text-sm max-w-xl mx-auto">
               Join India's fastest-growing logistics SaaS platform. Start your 7-day free trial today.
             </p>
             <div className="flex items-center justify-center gap-4">
-              <Link href="/login" className="px-8 py-3.5 bg-white text-sky-700 rounded-xl text-sm font-black hover:bg-sky-50 transition-colors">
+              <Link href="/login" className="px-8 py-3.5 bg-white text-primary-700 rounded-xl text-sm font-black hover:bg-primary-50 transition-colors">
                 Start Free Trial
               </Link>
               <Link href="/contact" className="px-8 py-3.5 bg-white/10 border border-white/20 text-white rounded-xl text-sm font-black hover:bg-white/20 transition-colors">

@@ -19,7 +19,7 @@ export default function ServicesRoutePage() {
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-surface">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase">
+            <span className="px-3 py-1 rounded-full bg-primary-100 text-primary-800 text-xs font-black uppercase">
               Modular Architecture
             </span>
             <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight">
@@ -32,9 +32,9 @@ export default function ServicesRoutePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allModules.map((grp) => (
-              <div key={grp.cat} className="bg-white rounded-3xl p-7 border border-sky-100 shadow-lg space-y-4">
+              <div key={grp.cat} className="bg-white rounded-3xl p-7 border border-primary-100 shadow-lg space-y-4">
                 <h3 className="text-lg font-black text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-sky-600" /> {grp.cat}
+                  <Sparkles className="w-5 h-5 text-primary-600" /> {grp.cat}
                 </h3>
                 <ul className="space-y-3">
                   {grp.list.map((item) => (

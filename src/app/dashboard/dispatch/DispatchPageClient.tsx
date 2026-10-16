@@ -227,7 +227,7 @@ export default function DispatchPageClient() {
   const getStatusBadge = (status: string) => {
     const statusConfig: Record<string, string> = {
       planned: "bg-amber-100 text-amber-800 border-amber-200",
-      dispatched: "bg-sky-100 text-sky-800 border-sky-200",
+      dispatched: "bg-primary-100 text-primary-800 border-primary-200",
       in_transit: "bg-purple-100 text-purple-800 border-purple-200",
       completed: "bg-emerald-100 text-emerald-800 border-emerald-200",
       cancelled: "bg-red-100 text-red-800 border-red-200",
@@ -241,8 +241,8 @@ export default function DispatchPageClient() {
 
   const renderManifestForm = (mode: "form" | "edit") => (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="bg-sky-50 rounded-2xl p-4 border border-sky-100 space-y-3">
-        <h4 className="font-bold text-xs text-sky-900 uppercase tracking-wide flex items-center gap-2">
+      <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 space-y-3">
+        <h4 className="font-bold text-xs text-primary-900 uppercase tracking-wide flex items-center gap-2">
           <FileText className="w-4 h-4" /> Manifest Information
         </h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -258,7 +258,7 @@ export default function DispatchPageClient() {
                 value={formData.manifestNumber}
                 onChange={(e) => setFormData({ ...formData, manifestNumber: e.target.value })}
                 placeholder="MF-2026-001"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -274,15 +274,15 @@ export default function DispatchPageClient() {
                 value={formData.tripNumber}
                 onChange={(e) => setFormData({ ...formData, tripNumber: e.target.value })}
                 placeholder="TRP-001"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-indigo-50 rounded-2xl p-4 border border-indigo-100 space-y-3">
-        <h4 className="font-bold text-xs text-indigo-900 uppercase tracking-wide flex items-center gap-2">
+      <div className="bg-midnight-50 rounded-2xl p-4 border border-midnight-100 space-y-3">
+        <h4 className="font-bold text-xs text-midnight-900 uppercase tracking-wide flex items-center gap-2">
           <MapPin className="w-4 h-4" /> Route & Schedule
         </h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -296,7 +296,7 @@ export default function DispatchPageClient() {
               value={formData.origin}
               onChange={(e) => setFormData({ ...formData, origin: e.target.value })}
               placeholder="Delhi"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <div>
@@ -309,7 +309,7 @@ export default function DispatchPageClient() {
               value={formData.destination}
               onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
               placeholder="Mumbai"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -325,7 +325,7 @@ export default function DispatchPageClient() {
                 required
                 value={formData.scheduledStart}
                 onChange={(e) => setFormData({ ...formData, scheduledStart: e.target.value })}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -340,7 +340,7 @@ export default function DispatchPageClient() {
                 required
                 value={formData.scheduledEnd}
                 onChange={(e) => setFormData({ ...formData, scheduledEnd: e.target.value })}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -361,7 +361,7 @@ export default function DispatchPageClient() {
               required
               value={formData.vehicleId}
               onChange={(e) => setFormData({ ...formData, vehicleId: e.target.value })}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 appearance-none"
             >
               <option value="">Select Vehicle</option>
               {vehiclesQuery.data?.map((vehicle: any) => (
@@ -382,7 +382,7 @@ export default function DispatchPageClient() {
               required
               value={formData.driverId}
               onChange={(e) => setFormData({ ...formData, driverId: e.target.value })}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 appearance-none"
             >
               <option value="">Select Driver</option>
               {driversQuery.data?.map((driver: any) => (
@@ -403,7 +403,7 @@ export default function DispatchPageClient() {
               required
               value={formData.branchId}
               onChange={(e) => setFormData({ ...formData, branchId: e.target.value })}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 appearance-none"
             >
               <option value="">Select Branch</option>
               {branchesQuery.data?.map((branch: any) => (
@@ -429,7 +429,7 @@ export default function DispatchPageClient() {
             onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
             placeholder="Enter any additional notes..."
             rows={3}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
           />
         </div>
       </div>
@@ -438,7 +438,7 @@ export default function DispatchPageClient() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Save className="w-4 h-4" />
           {isSubmitting ? (mode === "edit" ? "Updating..." : "Creating...") : mode === "edit" ? "Update Manifest" : "Create Manifest"}
@@ -461,14 +461,14 @@ export default function DispatchPageClient() {
 
     return (
       <div className="space-y-6">
-        <div className="bg-gradient-to-r from-indigo-600 to-sky-700 rounded-2xl p-5 text-white shadow-lg">
+        <div className="bg-midnight-600 rounded-2xl p-5 text-white shadow-lg">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
               <FileText className="w-6 h-6" />
             </div>
             <div>
               <h3 className="font-black text-lg">{manifest.manifestNumber}</h3>
-              <p className="text-xs text-sky-100">Trip: {manifest.tripNumber}</p>
+              <p className="text-xs text-primary-100">Trip: {manifest.tripNumber}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -476,9 +476,9 @@ export default function DispatchPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-            <Navigation className="w-4 h-4 text-sky-600" /> Route Information
+            <Navigation className="w-4 h-4 text-primary-600" /> Route Information
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="bg-slate-50 p-3 rounded-xl">
@@ -496,7 +496,7 @@ export default function DispatchPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <Calendar className="w-4 h-4 text-emerald-600" /> Schedule
           </h4>
@@ -516,7 +516,7 @@ export default function DispatchPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <Truck className="w-4 h-4 text-purple-600" /> Assignment Details
           </h4>
@@ -541,7 +541,7 @@ export default function DispatchPageClient() {
         </div>
 
         {manifest.notes && (
-          <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+          <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
             <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
               <FileText className="w-4 h-4 text-amber-600" /> Notes
             </h4>
@@ -549,9 +549,9 @@ export default function DispatchPageClient() {
           </div>
         )}
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-            <Package className="w-4 h-4 text-indigo-600" /> System Information
+            <Package className="w-4 h-4 text-midnight-600" /> System Information
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="bg-slate-50 p-3 rounded-xl">
@@ -570,7 +570,7 @@ export default function DispatchPageClient() {
         <div className="flex gap-3 pt-2">
           <button
             onClick={() => openEditForm(manifest)}
-            className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all"
+            className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all"
           >
             <Edit2 className="w-4 h-4" /> Edit Manifest
           </button>
@@ -588,17 +588,17 @@ export default function DispatchPageClient() {
   return (
     <div className="space-y-6 animate-in fade-in">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-indigo-900 via-sky-900 to-blue-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-midnight-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
             Module 16 • Dispatch Desk
           </span>
           <h1 className="text-2xl font-black mt-2">Trip Sheet Manifest & Route Allocation</h1>
-          <p className="text-xs text-sky-200 mt-1">Assign drivers and vehicles to scheduled orders with route optimization.</p>
+          <p className="text-xs text-primary-200 mt-1">Assign drivers and vehicles to scheduled orders with route optimization.</p>
         </div>
         <button
           onClick={openCreateForm}
-          className="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
+          className="px-5 py-2.5 bg-primary-500 hover:bg-primary-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
         >
           <Plus className="w-4 h-4" /> Add New Manifest
         </button>
@@ -606,23 +606,23 @@ export default function DispatchPageClient() {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Total Manifests</p>
           <h3 className="text-2xl font-black text-slate-900 mt-1">{manifests.length}</h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Planned</p>
           <h3 className="text-2xl font-black text-amber-600 mt-1">
             {manifests.filter((m) => m.status === "planned").length}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">In Transit</p>
           <h3 className="text-2xl font-black text-purple-600 mt-1">
             {manifests.filter((m) => m.status === "in_transit").length}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Completed</p>
           <h3 className="text-2xl font-black text-emerald-600 mt-1">
             {manifests.filter((m) => m.status === "completed").length}
@@ -631,7 +631,7 @@ export default function DispatchPageClient() {
       </div>
 
       {/* Active Manifest Roster Table */}
-      <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
           <h3 className="font-bold text-base text-slate-900">Active Manifest Roster ({manifests.length} Total Manifests)</h3>
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
@@ -642,7 +642,7 @@ export default function DispatchPageClient() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search origin, destination, manifest..."
-                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full sm:w-64"
+                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full sm:w-64"
               />
             </div>
             <div className="flex items-center gap-2">
@@ -652,7 +652,7 @@ export default function DispatchPageClient() {
                   type="date"
                   value={dateFrom}
                   onChange={(e) => setDateFrom(e.target.value)}
-                  className="pl-10 pr-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full sm:w-40"
+                  className="pl-10 pr-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full sm:w-40"
                 />
               </div>
               <div className="relative">
@@ -661,7 +661,7 @@ export default function DispatchPageClient() {
                   type="date"
                   value={dateTo}
                   onChange={(e) => setDateTo(e.target.value)}
-                  className="pl-10 pr-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full sm:w-40"
+                  className="pl-10 pr-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full sm:w-40"
                 />
               </div>
             </div>
@@ -687,10 +687,10 @@ export default function DispatchPageClient() {
                 <tr
                   key={manifest.id}
                   onClick={() => openViewSidebar(manifest)}
-                  className="hover:bg-sky-50/40 transition-colors cursor-pointer"
+                  className="hover:bg-primary-50/40 transition-colors cursor-pointer"
                 >
                   <td className="py-3.5 font-bold text-slate-900 flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-sky-600" /> {manifest.manifestNumber}
+                    <FileText className="w-4 h-4 text-primary-600" /> {manifest.manifestNumber}
                   </td>
                   <td className="py-3.5 font-mono text-slate-600">{manifest.tripNumber}</td>
                   <td className="py-3.5">
@@ -710,7 +710,7 @@ export default function DispatchPageClient() {
                           e.stopPropagation();
                           openViewSidebar(manifest);
                         }}
-                        className="p-2 rounded-lg bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors"
+                        className="p-2 rounded-lg bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors"
                         title="View Details"
                       >
                         <Eye className="w-3.5 h-3.5" />
@@ -755,7 +755,7 @@ export default function DispatchPageClient() {
       {(sidebarMode === "form" || sidebarMode === "edit" || sidebarMode === "view") && (
         <div className="fixed inset-0 z-50 flex justify-end overflow-hidden">
           <div className="absolute inset-0 bg-black/40" onClick={closeSidebar} />
-          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
+          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in- duration-300">
             <div className="flex items-center justify-between p-5 border-b border-slate-100 shrink-0">
               <h2 className="font-black text-base text-slate-900">
                 {sidebarMode === "form"

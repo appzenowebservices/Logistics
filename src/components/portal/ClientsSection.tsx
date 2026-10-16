@@ -42,7 +42,7 @@ export default function ClientsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {clients.map((c) => (
-            <div key={c.company} className="bg-white p-8 rounded-3xl border border-sky-100 shadow-lg flex flex-col justify-between space-y-4">
+            <div key={c.company} className="bg-white p-8 rounded-3xl border border-primary-100 shadow-lg flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-1 text-amber-500">
                   {[...Array(c.rating)].map((_, i) => (
@@ -55,7 +55,7 @@ export default function ClientsSection() {
               </div>
 
               <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-sky-100 text-sky-800 font-black flex items-center justify-center text-xs">
+                <div className="w-10 h-10 rounded-2xl bg-primary-100 text-primary-800 font-black flex items-center justify-center text-xs">
                   {c.company.charAt(0)}
                 </div>
                 <div>

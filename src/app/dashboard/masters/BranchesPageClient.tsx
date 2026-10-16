@@ -284,8 +284,8 @@ export default function BranchesPageClient() {
 
   const renderBranchForm = (mode: "form" | "edit") => (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="bg-sky-50 rounded-2xl p-4 border border-sky-100 space-y-3">
-        <h4 className="font-bold text-xs text-sky-900 uppercase tracking-wide flex items-center gap-2">
+      <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 space-y-3">
+        <h4 className="font-bold text-xs text-primary-900 uppercase tracking-wide flex items-center gap-2">
           <Building2 className="w-4 h-4" /> Basic Information
         </h4>
         <div>
@@ -300,7 +300,7 @@ export default function BranchesPageClient() {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder="Delhi National Hub"
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -315,7 +315,7 @@ export default function BranchesPageClient() {
             value={formData.code}
             onChange={(e) => setFormData({ ...formData, code: e.target.value })}
             placeholder="Auto-generated from pincode area"
-            className={`flex-1 px-4 py-2.5 rounded-xl border border-slate-200 font-mono font-semibold text-xs ${(mode === "form" || (mode === "edit" && user?.role !== "super_admin")) ? "bg-slate-100 text-slate-600 cursor-not-allowed" : "bg-white focus:outline-none focus:ring-2 focus:ring-sky-500"}`}
+            className={`flex-1 px-4 py-2.5 rounded-xl border border-slate-200 font-mono font-semibold text-xs ${(mode === "form" || (mode === "edit" && user?.role !== "super_admin")) ? "bg-slate-100 text-slate-600 cursor-not-allowed" : "bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"}`}
           />
           {mode === "edit" && user?.role === "super_admin" && (
             <p className="text-[10px] text-amber-600 mt-1 font-medium">
@@ -333,7 +333,7 @@ export default function BranchesPageClient() {
             onChange={(e) => setFormData({ ...formData, address: e.target.value })}
             placeholder="NH-8, Mahipalpur Logistics Park"
             rows={3}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
           />
         </div>
       </div>
@@ -396,8 +396,8 @@ export default function BranchesPageClient() {
       </div>
 
       {formData.pincodeAreaId && (
-        <div className="bg-sky-50 rounded-2xl p-4 border border-sky-100 space-y-3">
-          <h4 className="font-bold text-xs text-sky-900 uppercase tracking-wide flex items-center gap-2">
+        <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 space-y-3">
+          <h4 className="font-bold text-xs text-primary-900 uppercase tracking-wide flex items-center gap-2">
             <MapPin className="w-4 h-4" /> Location Map
           </h4>
           <OpenStreetMapPicker
@@ -435,7 +435,7 @@ export default function BranchesPageClient() {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder="+91-11-23456789"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -450,15 +450,15 @@ export default function BranchesPageClient() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="delhi@alms.com"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-indigo-50 rounded-2xl p-4 border border-indigo-100 space-y-3">
-        <h4 className="font-bold text-xs text-indigo-900 uppercase tracking-wide flex items-center gap-2">
+      <div className="bg-midnight-50 rounded-2xl p-4 border border-midnight-100 space-y-3">
+        <h4 className="font-bold text-xs text-midnight-900 uppercase tracking-wide flex items-center gap-2">
           <User className="w-4 h-4" /> Branch Manager
         </h4>
         <div>
@@ -472,7 +472,7 @@ export default function BranchesPageClient() {
               setFormData({ ...formData, managerId });
             }}
             disabled={!formData.pincodeAreaId || pincodesQuery.data?.length === 0}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-slate-100 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500 disabled:bg-slate-100 disabled:cursor-not-allowed"
           >
             <option value="">Select a Branch Manager...</option>
             {managersQuery.data
@@ -490,8 +490,8 @@ export default function BranchesPageClient() {
           )}
         </div>
         {selectedManager && (
-          <div className="mt-3 p-3 bg-white rounded-xl border border-indigo-200">
-            <p className="text-[10px] font-bold text-indigo-600 uppercase mb-2">Manager Details</p>
+          <div className="mt-3 p-3 bg-white rounded-xl border border-midnight-200">
+            <p className="text-[10px] font-bold text-midnight-600 uppercase mb-2">Manager Details</p>
             <div className="space-y-1.5 text-xs">
               <div className="flex items-center gap-2">
                 <User className="w-3.5 h-3.5 text-slate-400" />
@@ -512,7 +512,7 @@ export default function BranchesPageClient() {
         )}
 
         {mode === "edit" && user?.role === "super_admin" && formData.code !== selectedBranch?.code && (
-          <div className="mt-4 pt-3 border-t border-indigo-200">
+          <div className="mt-4 pt-3 border-t border-midnight-200">
             <label className="block font-bold text-slate-700 mb-1.5 text-xs uppercase tracking-wide">
               Reason for Branch Code Change <span className="text-red-500">*</span>
             </label>
@@ -521,7 +521,7 @@ export default function BranchesPageClient() {
               onChange={(e) => setFormData({ ...formData, changeReason: e.target.value })}
               placeholder="Specify reason for changing branch code..."
               rows={2}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500 resize-none"
             />
           </div>
         )}
@@ -531,7 +531,7 @@ export default function BranchesPageClient() {
         <button
           type="submit"
           disabled={isSubmitting || pincodesQuery.data?.length === 0}
-          className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Save className="w-4 h-4" />
           {isSubmitting ? (mode === "edit" ? "Updating..." : "Creating...") : mode === "edit" ? "Update Branch" : "Create Branch"}
@@ -554,7 +554,7 @@ export default function BranchesPageClient() {
 
     return (
       <div className="space-y-6">
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-2xl p-5 text-white shadow-lg">
+        <div className="bg-emerald-600 rounded-2xl p-5 text-white shadow-lg">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
               <MapPin className="w-6 h-6" />
@@ -566,9 +566,9 @@ export default function BranchesPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-            <Building2 className="w-4 h-4 text-sky-600" /> Basic Information
+            <Building2 className="w-4 h-4 text-primary-600" /> Basic Information
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="bg-slate-50 p-3 rounded-xl">
@@ -578,7 +578,7 @@ export default function BranchesPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <MapPin className="w-4 h-4 text-emerald-600" /> Pincode Area
           </h4>
@@ -602,7 +602,7 @@ export default function BranchesPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <Phone className="w-4 h-4 text-purple-600" /> Contact Details
           </h4>
@@ -618,9 +618,9 @@ export default function BranchesPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-            <User className="w-4 h-4 text-indigo-600" /> Branch Manager
+            <User className="w-4 h-4 text-midnight-600" /> Branch Manager
           </h4>
           {branch.managerId ? (
             <div className="space-y-3">
@@ -652,7 +652,7 @@ export default function BranchesPageClient() {
           <button
             onClick={() => openEditForm(branch)}
             disabled={pincodesQuery.data?.length === 0}
-            className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Edit2 className="w-4 h-4" /> Edit Branch
           </button>
@@ -669,7 +669,7 @@ export default function BranchesPageClient() {
 
   return (
     <div className="space-y-6 animate-in fade-in">
-      <div className="bg-gradient-to-r from-emerald-900 to-teal-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-emerald-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
             Master Data • Offices & Hubs
@@ -692,23 +692,23 @@ export default function BranchesPageClient() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Total Branches</p>
           <h3 className="text-2xl font-black text-slate-900 mt-1">{branches.length}</h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">States Covered</p>
           <h3 className="text-2xl font-black text-emerald-600 mt-1">
             {new Set(branches.map((b) => b.pincodeAreaState)).size}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Areas Covered</p>
-          <h3 className="text-2xl font-black text-sky-600 mt-1">
+          <h3 className="text-2xl font-black text-primary-600 mt-1">
             {branches.filter((b) => b.pincodeAreaId).length}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">With Managers</p>
           <h3 className="text-2xl font-black text-amber-600 mt-1">
             {branches.filter((b) => b.managerId).length}
@@ -716,7 +716,7 @@ export default function BranchesPageClient() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
           <h3 className="font-bold text-base text-slate-900">Active Offices & Hubs ({branches.length} Total)</h3>
           <div className="relative">
@@ -726,7 +726,7 @@ export default function BranchesPageClient() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by name, code, city, state..."
-              className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full sm:w-80"
+              className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full sm:w-80"
             />
           </div>
         </div>
@@ -749,9 +749,9 @@ export default function BranchesPageClient() {
                 <tr
                   key={branch.id}
                   onClick={() => openViewSidebar(branch)}
-                  className="hover:bg-sky-50/40 transition-colors cursor-pointer"
+                  className="hover:bg-primary-50/40 transition-colors cursor-pointer"
                 >
-                  <td className="py-3.5 font-mono font-bold text-sky-600">{branch.code}</td>
+                  <td className="py-3.5 font-mono font-bold text-primary-600">{branch.code}</td>
                   <td className="py-3.5 font-bold text-slate-900">{branch.name}</td>
                   <td className="py-3.5 font-medium">
                     {branch.pincodeAreaName || (branch.pincodeAreaId ? "Assigned" : "Unassigned")}
@@ -781,7 +781,7 @@ export default function BranchesPageClient() {
                           e.stopPropagation();
                           openViewSidebar(branch);
                         }}
-                        className="p-2 rounded-lg bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors"
+                        className="p-2 rounded-lg bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors"
                         title="View Details"
                       >
                         <Eye className="w-3.5 h-3.5" />
@@ -825,7 +825,7 @@ export default function BranchesPageClient() {
       {(sidebarMode === "form" || sidebarMode === "edit" || sidebarMode === "view") && (
         <div className="fixed inset-0 z-50 flex justify-end overflow-hidden">
           <div className="absolute inset-0 bg-black/40" onClick={closeSidebar} />
-          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
+          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in- duration-300">
             <div className="flex items-center justify-between p-5 border-b border-slate-100 shrink-0">
               <h2 className="font-black text-base text-slate-900">
                 {sidebarMode === "form"

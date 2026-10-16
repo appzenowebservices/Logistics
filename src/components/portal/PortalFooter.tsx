@@ -18,20 +18,20 @@ export default function PortalFooter() {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-slate-900 via-sky-950 to-slate-950 text-slate-300 pt-16 pb-12 border-t border-sky-900/60 font-sans">
+    <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-primary-900/60 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-sky-800/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-primary-800/40">
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-500 to-blue-500 flex items-center justify-center text-white font-black text-lg shadow-lg">
+              <div className="w-10 h-10 rounded-2xl bg-primary-500 flex items-center justify-center text-white font-black text-lg shadow-lg">
                 AL
               </div>
               <div>
                 <span className="text-xl font-black text-white tracking-tight block leading-none">
                   ADDies LMS
                 </span>
-                <span className="text-[10px] font-bold text-sky-400 tracking-widest uppercase">
+                <span className="text-[10px] font-bold text-primary-400 tracking-widest uppercase">
                   Smart Logistics • Smart Business
                 </span>
               </div>
@@ -46,13 +46,13 @@ export default function PortalFooter() {
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Connect on Social Networks:
               </p>
               <div className="flex items-center gap-2.5">
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-xl bg-white/10 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-all text-slate-300 shadow-sm">
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-xl bg-white/10 hover:bg-primary-500 hover:text-white flex items-center justify-center transition-all text-slate-300 shadow-sm">
                   <IconLinkedin className="w-4 h-4" />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter/X" className="w-9 h-9 rounded-xl bg-white/10 hover:bg-sky-400 hover:text-white flex items-center justify-center transition-all text-slate-300 shadow-sm">
+                <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter/X" className="w-9 h-9 rounded-xl bg-white/10 hover:bg-primary-400 hover:text-white flex items-center justify-center transition-all text-slate-300 shadow-sm">
                   <IconTwitter className="w-4 h-4" />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-xl bg-white/10 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-all text-slate-300 shadow-sm">
+                <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-xl bg-white/10 hover:bg-navy-600 hover:text-white flex items-center justify-center transition-all text-slate-300 shadow-sm">
                   <IconFacebook className="w-4 h-4" />
                 </a>
                 <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-xl bg-white/10 hover:bg-pink-600 hover:text-white flex items-center justify-center transition-all text-slate-300 shadow-sm">
@@ -67,16 +67,16 @@ export default function PortalFooter() {
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-sky-500 pl-2">
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-primary-500 pl-2">
               Public Portal
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
-              <li><Link href="/" className="hover:text-sky-400 transition-colors">Home • 3D Showcase</Link></li>
-              <li><Link href="/services" className="hover:text-sky-400 transition-colors">25+ ERP Modules</Link></li>
-              <li><Link href="/fleet-showcase" className="hover:text-sky-400 transition-colors">Fleet & IoT Hardware</Link></li>
-              <li><Link href="/tracking" className="hover:text-sky-400 transition-colors">Live AWB Tracking</Link></li>
-              <li><Link href="/about" className="hover:text-sky-400 transition-colors">Company Setup & Leadership</Link></li>
-              <li><Link href="/contact" className="hover:text-sky-400 transition-colors">Pan-India Branch Contact</Link></li>
+              <li><Link href="/" className="hover:text-primary-400 transition-colors">Home • 3D Showcase</Link></li>
+              <li><Link href="/services" className="hover:text-primary-400 transition-colors">25+ ERP Modules</Link></li>
+              <li><Link href="/fleet-showcase" className="hover:text-primary-400 transition-colors">Fleet & IoT Hardware</Link></li>
+              <li><Link href="/tracking" className="hover:text-primary-400 transition-colors">Live AWB Tracking</Link></li>
+              <li><Link href="/about" className="hover:text-primary-400 transition-colors">Company Setup & Leadership</Link></li>
+              <li><Link href="/contact" className="hover:text-primary-400 transition-colors">Pan-India Branch Contact</Link></li>
             </ul>
           </div>
 
@@ -87,11 +87,11 @@ export default function PortalFooter() {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li><Link href="/login" className="hover:text-emerald-400 transition-colors font-semibold text-white">🔐 Role ERP Login Screen</Link></li>
-              <li><Link href="/login" className="hover:text-sky-400 transition-colors">Super Admin & CXO Portal</Link></li>
-              <li><Link href="/login" className="hover:text-sky-400 transition-colors">Dispatcher & Fleet Manager</Link></li>
-              <li><Link href="/login" className="hover:text-sky-400 transition-colors">Warehouse & Barcode Scanner</Link></li>
-              <li><Link href="/login" className="hover:text-sky-400 transition-colors">Driver Android App (PWA)</Link></li>
-              <li><Link href="/login" className="hover:text-sky-400 transition-colors">Corporate Client Portal</Link></li>
+              <li><Link href="/login" className="hover:text-primary-400 transition-colors">Super Admin & CXO Portal</Link></li>
+              <li><Link href="/login" className="hover:text-primary-400 transition-colors">Dispatcher & Fleet Manager</Link></li>
+              <li><Link href="/login" className="hover:text-primary-400 transition-colors">Warehouse & Barcode Scanner</Link></li>
+              <li><Link href="/login" className="hover:text-primary-400 transition-colors">Driver Android App (PWA)</Link></li>
+              <li><Link href="/login" className="hover:text-primary-400 transition-colors">Corporate Client Portal</Link></li>
             </ul>
           </div>
 
@@ -115,19 +115,19 @@ export default function PortalFooter() {
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="enter corporate email..."
                   required
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-3.5 py-2 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-3.5 py-2 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
                 <button
                   type="submit"
-                  className="w-full py-2 bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white font-bold text-xs rounded-xl shadow flex items-center justify-center gap-1.5 transition-all"
+                  className="w-full py-2 bg-primary-600  text-white font-bold text-xs rounded-xl shadow flex items-center justify-center gap-1.5 transition-all"
                 >
                   <Send className="w-3.5 h-3.5" /> Subscribe Now
                 </button>
               </form>
             )}
 
-            <div className="mt-4 pt-4 border-t border-sky-900/50 text-[11px] text-slate-400 space-y-1">
-              <div className="flex items-center gap-1.5 text-sky-400 font-semibold">
+            <div className="mt-4 pt-4 border-t border-primary-900/50 text-[11px] text-slate-400 space-y-1">
+              <div className="flex items-center gap-1.5 text-primary-400 font-semibold">
                 <MapPin className="w-3.5 h-3.5" /> HQ: NH-8 Logistics Park, Delhi
               </div>
               <div className="flex items-center gap-1.5">

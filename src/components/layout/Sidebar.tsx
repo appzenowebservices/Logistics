@@ -118,14 +118,14 @@ export default function Sidebar({ isOpen, onCloseMobile, userRole = "super_admin
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 bg-gradient-to-b from-sky-950 via-sky-900 to-slate-950 text-slate-100 transition-all duration-300 ease-in-out flex flex-col shadow-xl border-r border-sky-800/40 shrink-0 h-screen ${
+        className={`fixed inset-y-0 left-0 z-50 bg-primary-950 text-slate-100 transition-all duration-300 ease-in-out flex flex-col shadow-xl border-r border-primary-800/40 shrink-0 h-screen ${
           isOpen ? "w-64 translate-x-0" : "-translate-x-full lg:translate-x-0 lg:w-20"
         }`}
       >
         {/* Brand Header */}
-        <div className="h-16 flex items-center justify-between px-4 border-b border-sky-800/50 shrink-0 bg-sky-950/50">
+        <div className="h-16 flex items-center justify-between px-4 border-b border-primary-800/50 shrink-0 bg-primary-950/50">
           <Link href="/dashboard" className="flex items-center gap-3 overflow-hidden">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-500 via-blue-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-sky-500/30 shrink-0">
+            <div className="w-10 h-10 rounded-2xl bg-primary-500 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-primary-500/30 shrink-0">
               AL
             </div>
             {isOpen && (
@@ -133,7 +133,7 @@ export default function Sidebar({ isOpen, onCloseMobile, userRole = "super_admin
                 <span className="font-extrabold text-white text-base tracking-tight block leading-none">
                   ADDies LMS
                 </span>
-                <span className="text-[10px] font-bold text-sky-400 tracking-wider uppercase">
+                <span className="text-[10px] font-bold text-primary-400 tracking-wider uppercase">
                   Smart Logistics ERP
                 </span>
               </div>
@@ -169,12 +169,12 @@ export default function Sidebar({ isOpen, onCloseMobile, userRole = "super_admin
                   title={!isOpen ? item.title : undefined}
                   className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group ${
                     isActive
-                      ? "bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/25"
+                      ? "bg-primary-500 text-white shadow-md shadow-primary-500/25"
                       : "text-slate-300 hover:bg-white/10 hover:text-white"
                   }`}
                 >
                   <div className={`flex items-center gap-3 min-w-0 ${!isOpen ? "mx-auto" : ""}`}>
-                    <item.icon className={`w-4 h-4 shrink-0 transition-transform group-hover:scale-110 ${isActive ? "text-white" : "text-sky-400"}`} />
+                    <item.icon className={`w-4 h-4 shrink-0 transition-transform group-hover:scale-110 ${isActive ? "text-white" : "text-primary-400"}`} />
                     {isOpen && <span className="truncate">{item.title}</span>}
                   </div>
 
@@ -198,12 +198,12 @@ export default function Sidebar({ isOpen, onCloseMobile, userRole = "super_admin
 
                 {/* Submenu */}
                 {hasSubItems && expandedSections[item.title] && (
-                  <div className="ml-7 mt-1 space-y-1 border-l border-sky-800/60 pl-3">
+                  <div className="ml-7 mt-1 space-y-1 border-l border-primary-800/60 pl-3">
                     {item.subItems.map((sub) => (
                       <Link
                         key={sub.name}
                         href={sub.href}
-                        className="block py-1.5 text-[11px] font-medium text-slate-400 hover:text-sky-300 transition-colors"
+                        className="block py-1.5 text-[11px] font-medium text-slate-400 hover:text-primary-300 transition-colors"
                       >
                         {sub.name}
                       </Link>
@@ -217,9 +217,9 @@ export default function Sidebar({ isOpen, onCloseMobile, userRole = "super_admin
 
         {/* Footer */}
         {isOpen ? (
-          <div className="p-3 border-t border-sky-900/60 shrink-0">
-            <div className="bg-sky-900/30 rounded-xl p-3 border border-sky-800/40 text-[11px]">
-              <div className="flex items-center justify-between text-sky-300 font-bold mb-0.5">
+          <div className="p-3 border-t border-primary-900/60 shrink-0">
+            <div className="bg-primary-900/30 rounded-xl p-3 border border-primary-800/40 text-[11px]">
+              <div className="flex items-center justify-between text-primary-300 font-bold mb-0.5">
                 <span>Node.js / tRPC Engine</span>
                 <span className="flex items-center gap-1 text-emerald-400 font-semibold text-[10px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" /> Online
@@ -229,7 +229,7 @@ export default function Sidebar({ isOpen, onCloseMobile, userRole = "super_admin
             </div>
           </div>
         ) : (
-          <div className="p-3 border-t border-sky-900/60 shrink-0 text-center">
+          <div className="p-3 border-t border-primary-900/60 shrink-0 text-center">
             <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block" title="tRPC Node Server Online" />
           </div>
         )}

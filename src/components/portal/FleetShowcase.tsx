@@ -13,7 +13,7 @@ export default function FleetShowcase() {
       model: "Tata Prima 4928.S / Ashok Leyland 5525",
       capacity: "28.50 to 40.0 Tons",
       sensors: ["CAN Bus Engine OBD Reader", "Door Open/Close Alarm", "Harsh Braking Accelerometer", "4G LTE SIM Dual-SIM Backup"],
-      imageBg: "from-sky-900 to-slate-900",
+      imageBg: "bg-primary-900",
       speed: "68 km/h Avg Highway",
     },
     reefer: {
@@ -21,7 +21,7 @@ export default function FleetShowcase() {
       model: "BharatBenz 1617R Reefer / Eicher Pro",
       capacity: "7.50 Tons Temperature Controlled",
       sensors: ["Digital Humidity & Temp Sensor (-25°C to +15°C)", "Real-time Defrost Alert", "Fuel Theft Ultrasonic Sensor", "Panic Button Emergency Link"],
-      imageBg: "from-emerald-900 to-teal-950",
+      imageBg: "bg-emerald-900",
       speed: "55 km/h Regulated",
     },
     mini: {
@@ -29,7 +29,7 @@ export default function FleetShowcase() {
       model: "Mahindra Bolero Pickup / Ashok Leyland Dost",
       capacity: "1.75 to 3.50 Tons",
       sensors: ["Mini GPS Geo-fence Beacon", "Odometer Digital Sync", "Driver Fatigue Camera AI", "Instant QR E-POD Printer"],
-      imageBg: "from-blue-900 to-indigo-950",
+      imageBg: "bg-navy-900",
       speed: "45 km/h City Transit",
     },
   };
@@ -37,12 +37,12 @@ export default function FleetShowcase() {
   const current = fleetTypes[activeTab];
 
   return (
-    <section className="py-20 bg-white border-y border-sky-100 px-4 sm:px-6 lg:px-8 font-sans">
+    <section className="py-20 bg-white border-y border-primary-100 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left info */}
           <div className="lg:col-span-6 space-y-6">
-            <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-black uppercase tracking-wider">
+            <span className="px-3 py-1 rounded-full bg-primary-100 text-primary-800 text-xs font-black uppercase tracking-wider">
               IoT Hardware & Fleet Telemetry
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
@@ -58,7 +58,7 @@ export default function FleetShowcase() {
                 onClick={() => setActiveTab("container")}
                 className={`px-4 py-2.5 rounded-xl font-bold text-xs transition-all ${
                   activeTab === "container"
-                    ? "bg-sky-600 text-white shadow-md shadow-sky-600/30"
+                    ? "bg-primary-600 text-white shadow-md shadow-primary-600/30"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
@@ -78,7 +78,7 @@ export default function FleetShowcase() {
                 onClick={() => setActiveTab("mini")}
                 className={`px-4 py-2.5 rounded-xl font-bold text-xs transition-all ${
                   activeTab === "mini"
-                    ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
+                    ? "bg-navy-600 text-white shadow-md shadow-navy-600/30"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
@@ -101,7 +101,7 @@ export default function FleetShowcase() {
             <div className="pt-4">
               <Link
                 href="/fleet-showcase"
-                className="inline-flex items-center gap-2 font-bold text-xs text-sky-600 hover:text-sky-800"
+                className="inline-flex items-center gap-2 font-bold text-xs text-primary-600 hover:text-primary-800"
               >
                 Explore Complete Hardware PCB Specs & Certifications →
               </Link>
@@ -110,11 +110,11 @@ export default function FleetShowcase() {
 
           {/* Right visual card */}
           <div className="lg:col-span-6">
-            <div className={`bg-gradient-to-br ${current.imageBg} rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden border border-sky-400/30`}>
-              <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/20 rounded-full blur-3xl pointer-events-none" />
+            <div className={`${current.imageBg} rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden border border-primary-400/30`}>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl pointer-events-none" />
               
               <div className="flex items-center justify-between pb-6 border-b border-white/15">
-                <span className="text-xs font-mono text-sky-300 bg-white/10 px-3 py-1 rounded-full">
+                <span className="text-xs font-mono text-primary-300 bg-white/10 px-3 py-1 rounded-full">
                   ALMS Telemetry Unit v4.2
                 </span>
                 <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-400">
@@ -124,10 +124,10 @@ export default function FleetShowcase() {
 
               <div className="py-12 text-center space-y-4 relative z-10">
                 <div className="w-24 h-24 rounded-3xl bg-white/10 backdrop-blur-md flex items-center justify-center mx-auto border border-white/20 shadow-xl">
-                  <Truck className="w-12 h-12 text-sky-400 animate-pulse" />
+                  <Truck className="w-12 h-12 text-primary-400 animate-pulse" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black text-white">{current.name}</h3>
-                <p className="text-xs text-sky-200 font-mono">{current.model}</p>
+                <p className="text-xs text-primary-200 font-mono">{current.model}</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/15 text-center">

@@ -257,8 +257,8 @@ export default function DriversPageClient() {
 
   const renderDriverForm = (mode: "form" | "edit") => (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="bg-sky-50 rounded-2xl p-4 border border-sky-100 space-y-3">
-        <h4 className="font-bold text-xs text-sky-900 uppercase tracking-wide flex items-center gap-2">
+      <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 space-y-3">
+        <h4 className="font-bold text-xs text-primary-900 uppercase tracking-wide flex items-center gap-2">
           <User className="w-4 h-4" /> Personal Information
         </h4>
         <div>
@@ -271,7 +271,7 @@ export default function DriversPageClient() {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             placeholder="Gurpreet Singh"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -285,7 +285,7 @@ export default function DriversPageClient() {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="driver@alms.com"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <div>
@@ -297,7 +297,7 @@ export default function DriversPageClient() {
               value={formData.password}
               onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               placeholder={mode === "edit" ? "Leave blank to keep current" : "password123"}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -311,7 +311,7 @@ export default function DriversPageClient() {
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               placeholder="+91-9876543210"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <div>
@@ -321,7 +321,7 @@ export default function DriversPageClient() {
             <select
               value={formData.branchId}
               onChange={(e) => setFormData({ ...formData, branchId: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <option value="">Select Branch</option>
               {branchesQuery.data?.map((branch: any) => (
@@ -348,7 +348,7 @@ export default function DriversPageClient() {
             value={formData.licenseNumber}
             onChange={(e) => setFormData({ ...formData, licenseNumber: e.target.value })}
             placeholder="DL-14201100982"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -363,7 +363,7 @@ export default function DriversPageClient() {
                 required
                 value={formData.licenseIssueDate}
                 onChange={(e) => setFormData({ ...formData, licenseIssueDate: e.target.value })}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -378,7 +378,7 @@ export default function DriversPageClient() {
                 required
                 value={formData.licenseExpiryDate}
                 onChange={(e) => setFormData({ ...formData, licenseExpiryDate: e.target.value })}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
           </div>
@@ -391,7 +391,7 @@ export default function DriversPageClient() {
             <select
               value={formData.licenseClass}
               onChange={(e) => setFormData({ ...formData, licenseClass: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <option>Heavy Vehicle</option>
               <option>Light Vehicle</option>
@@ -408,7 +408,7 @@ export default function DriversPageClient() {
               value={formData.aadharNumber}
               onChange={(e) => setFormData({ ...formData, aadharNumber: e.target.value })}
               placeholder="XXXX-XXXX-XXXX"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -426,7 +426,7 @@ export default function DriversPageClient() {
             <select
               value={formData.policeVerificationStatus}
               onChange={(e) => setFormData({ ...formData, policeVerificationStatus: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <option value="pending">Pending</option>
               <option value="verified">Verified</option>
@@ -441,7 +441,7 @@ export default function DriversPageClient() {
               type="date"
               value={formData.policeVerificationDate}
               onChange={(e) => setFormData({ ...formData, policeVerificationDate: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -453,7 +453,7 @@ export default function DriversPageClient() {
             <select
               value={formData.medicalCheckupStatus}
               onChange={(e) => setFormData({ ...formData, medicalCheckupStatus: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <option value="pending">Pending</option>
               <option value="passed">Passed</option>
@@ -468,7 +468,7 @@ export default function DriversPageClient() {
               type="date"
               value={formData.medicalCheckupDate}
               onChange={(e) => setFormData({ ...formData, medicalCheckupDate: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -489,7 +489,7 @@ export default function DriversPageClient() {
               value={formData.emergencyContactName}
               onChange={(e) => setFormData({ ...formData, emergencyContactName: e.target.value })}
               placeholder="Kuldeep Singh"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <div>
@@ -502,7 +502,7 @@ export default function DriversPageClient() {
               value={formData.emergencyContactPhone}
               onChange={(e) => setFormData({ ...formData, emergencyContactPhone: e.target.value })}
               placeholder="+91-9876543210"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -512,7 +512,7 @@ export default function DriversPageClient() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Save className="w-4 h-4" />
           {isSubmitting ? (mode === "edit" ? "Updating..." : "Registering...") : mode === "edit" ? "Update Driver" : "Register Driver"}
@@ -535,14 +535,14 @@ export default function DriversPageClient() {
 
     return (
       <div className="space-y-6">
-        <div className="bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-5 text-white shadow-lg">
+        <div className="bg-primary-600 rounded-2xl p-5 text-white shadow-lg">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
               <Users className="w-6 h-6" />
             </div>
             <div>
               <h3 className="font-black text-lg">{driver.name}</h3>
-              <p className="text-xs text-sky-100">{driver.email}</p>
+              <p className="text-xs text-primary-100">{driver.email}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -559,9 +559,9 @@ export default function DriversPageClient() {
 
         {driver.compliance && (
           <>
-            <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+            <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
               <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-                <FileText className="w-4 h-4 text-sky-600" /> License Details
+                <FileText className="w-4 h-4 text-primary-600" /> License Details
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div className="bg-slate-50 p-3 rounded-xl">
@@ -587,7 +587,7 @@ export default function DriversPageClient() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+            <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
               <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
                 <Shield className="w-4 h-4 text-emerald-600" /> Verification & Medical
               </h4>
@@ -603,7 +603,7 @@ export default function DriversPageClient() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+            <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
               <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
                 <Phone className="w-4 h-4 text-purple-600" /> Emergency Contact
               </h4>
@@ -624,7 +624,7 @@ export default function DriversPageClient() {
         <div className="flex gap-3 pt-2">
           <button
             onClick={() => openEditForm(driver)}
-            className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all"
+            className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all"
           >
             <Edit2 className="w-4 h-4" /> Edit Driver
           </button>
@@ -642,17 +642,17 @@ export default function DriversPageClient() {
   return (
     <div className="space-y-6 animate-in fade-in">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-sky-900 to-indigo-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-primary-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
             Module 11 • Driver Ecosystem
           </span>
           <h1 className="text-2xl font-black mt-2">Driver Master & Safety Compliance</h1>
-          <p className="text-xs text-sky-200 mt-1">Driving licenses, police verification, trip performance ratings, and attendance.</p>
+          <p className="text-xs text-primary-200 mt-1">Driving licenses, police verification, trip performance ratings, and attendance.</p>
         </div>
         <button
           onClick={openCreateForm}
-          className="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
+          className="px-5 py-2.5 bg-primary-500 hover:bg-primary-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
         >
           <Plus className="w-4 h-4" /> Add New Driver
         </button>
@@ -660,23 +660,23 @@ export default function DriversPageClient() {
 
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Total Drivers</p>
           <h3 className="text-2xl font-black text-slate-900 mt-1">{drivers.length}</h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Active</p>
           <h3 className="text-2xl font-black text-emerald-600 mt-1">
             {drivers.filter((d) => d.isActive).length}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Police Verified</p>
-          <h3 className="text-2xl font-black text-sky-600 mt-1">
+          <h3 className="text-2xl font-black text-primary-600 mt-1">
             {drivers.filter((d) => d.compliance?.policeVerificationStatus === "verified").length}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Medical Passed</p>
           <h3 className="text-2xl font-black text-emerald-600 mt-1">
             {drivers.filter((d) => d.compliance?.medicalCheckupStatus === "passed").length}
@@ -685,7 +685,7 @@ export default function DriversPageClient() {
       </div>
 
       {/* Drivers Table */}
-      <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
           <h3 className="font-bold text-base text-slate-900">Driver Master Roster ({drivers.length} Total Drivers)</h3>
           <div className="relative">
@@ -695,7 +695,7 @@ export default function DriversPageClient() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by name, email, role..."
-              className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full sm:w-80"
+              className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full sm:w-80"
             />
           </div>
         </div>
@@ -717,7 +717,7 @@ export default function DriversPageClient() {
                 <tr
                   key={driver.id}
                   onClick={() => openViewSidebar(driver)}
-                  className="hover:bg-sky-50/40 transition-colors cursor-pointer"
+                  className="hover:bg-primary-50/40 transition-colors cursor-pointer"
                 >
                   <td className="py-3.5 font-bold text-slate-900">{driver.name}</td>
                   <td className="py-3.5 font-mono text-slate-600">{driver.compliance?.licenseNumber || "N/A"}</td>
@@ -735,7 +735,7 @@ export default function DriversPageClient() {
                           e.stopPropagation();
                           openViewSidebar(driver);
                         }}
-                        className="p-2 rounded-lg bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors"
+                        className="p-2 rounded-lg bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors"
                         title="View Details"
                       >
                         <Eye className="w-3.5 h-3.5" />
@@ -780,7 +780,7 @@ export default function DriversPageClient() {
       {(sidebarMode === "form" || sidebarMode === "edit" || sidebarMode === "view") && (
         <div className="fixed inset-0 z-50 flex justify-end overflow-hidden">
           <div className="absolute inset-0 bg-black/40" onClick={closeSidebar} />
-          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
+          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in- duration-300">
             <div className="flex items-center justify-between p-5 border-b border-slate-100 shrink-0">
               <h2 className="font-black text-base text-slate-900">
                 {sidebarMode === "form"

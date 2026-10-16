@@ -352,7 +352,7 @@ export default function OpenStreetMapPicker({
       <div className="space-y-3">
         <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center bg-slate-50" style={{ height }}>
           <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-lg border border-slate-200">
-            <Loader2 className="w-4 h-4 text-sky-600 animate-spin" />
+            <Loader2 className="w-4 h-4 text-primary-600 animate-spin" />
             <span className="text-xs font-bold text-slate-700">Loading map...</span>
           </div>
         </div>
@@ -366,7 +366,7 @@ export default function OpenStreetMapPicker({
         {loading && (
           <div className="absolute inset-0 z-[1000] bg-white/60 backdrop-blur-sm flex items-center justify-center">
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl shadow-lg border border-slate-200">
-              <Loader2 className="w-4 h-4 text-sky-600 animate-spin" />
+              <Loader2 className="w-4 h-4 text-primary-600 animate-spin" />
               <span className="text-xs font-bold text-slate-700">Locating on map...</span>
             </div>
           </div>
@@ -379,7 +379,7 @@ export default function OpenStreetMapPicker({
               onClick={handleMapClick}
               className="flex items-center gap-1.5 px-3 py-2 bg-white rounded-lg shadow-md border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50"
             >
-              <Navigation className="w-3.5 h-3.5 text-sky-600" />
+              <Navigation className="w-3.5 h-3.5 text-primary-600" />
               Update from Map
             </button>
           </div>
@@ -387,17 +387,17 @@ export default function OpenStreetMapPicker({
       </div>
 
       {addressParts.display_name && (
-        <div className="bg-sky-50 rounded-xl p-3 border border-sky-100 space-y-1.5">
-          <p className="text-[10px] font-black text-sky-900 uppercase tracking-wider flex items-center gap-1.5">
+        <div className="bg-primary-50 rounded-xl p-3 border border-primary-100 space-y-1.5">
+          <p className="text-[10px] font-black text-primary-900 uppercase tracking-wider flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5" />
             Resolved Address
           </p>
           <p className="text-xs text-slate-700 font-medium leading-relaxed">{addressParts.display_name}</p>
           <div className="flex flex-wrap gap-3 text-[10px] font-bold text-slate-500">
-            {addressParts.city && <span className="px-2 py-0.5 rounded-full bg-white border border-sky-200">City: {addressParts.city}</span>}
-            {addressParts.state && <span className="px-2 py-0.5 rounded-full bg-white border border-sky-200">State: {addressParts.state}</span>}
-            {addressParts.country && <span className="px-2 py-0.5 rounded-full bg-white border border-sky-200">Country: {addressParts.country}</span>}
-            {addressParts.pincode && <span className="px-2 py-0.5 rounded-full bg-white border border-sky-200">Pincode: {addressParts.pincode}</span>}
+            {addressParts.city && <span className="px-2 py-0.5 rounded-full bg-white border border-primary-200">City: {addressParts.city}</span>}
+            {addressParts.state && <span className="px-2 py-0.5 rounded-full bg-white border border-primary-200">State: {addressParts.state}</span>}
+            {addressParts.country && <span className="px-2 py-0.5 rounded-full bg-white border border-primary-200">Country: {addressParts.country}</span>}
+            {addressParts.pincode && <span className="px-2 py-0.5 rounded-full bg-white border border-primary-200">Pincode: {addressParts.pincode}</span>}
           </div>
         </div>
       )}

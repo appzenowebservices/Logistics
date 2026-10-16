@@ -75,13 +75,13 @@ export default function TrackingMap() {
 
   return (
     <div className="space-y-6 animate-in fade-in">
-      <div className="bg-gradient-to-r from-sky-900 to-indigo-950 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-primary-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
             Module 19 • IoT Telemetry
           </span>
           <h1 className="text-2xl font-black mt-2">Live GPS & IoT Device Engine</h1>
-          <p className="text-xs text-sky-200 mt-1">Real-time vehicle speed, CAN Bus engine metrics, fuel sensors, and harsh braking alerts.</p>
+          <p className="text-xs text-primary-200 mt-1">Real-time vehicle speed, CAN Bus engine metrics, fuel sensors, and harsh braking alerts.</p>
         </div>
         <div className="flex items-center gap-2">
           <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 flex items-center gap-1.5">
@@ -91,10 +91,10 @@ export default function TrackingMap() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm space-y-4">
+      <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="font-bold text-base text-slate-900 flex items-center gap-2">
-            <Navigation className="w-5 h-5 text-sky-600" /> Pan-India GPS Corridors
+            <Navigation className="w-5 h-5 text-primary-600" /> Pan-India GPS Corridors
           </h3>
           <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
             🟢 {vehiclePositions.length} Vehicles Tracked
@@ -106,9 +106,9 @@ export default function TrackingMap() {
         </div>
 
         {selectedVehicle && (
-          <div className="bg-sky-50 rounded-2xl p-5 border border-sky-100">
+          <div className="bg-primary-50 rounded-2xl p-5 border border-primary-100">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-600 to-blue-700 flex items-center justify-center text-white font-black text-sm shadow-lg shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-primary-600 flex items-center justify-center text-white font-black text-sm shadow-lg shrink-0">
                 {selectedVehicle.id.slice(0, 3)}
               </div>
               <div className="flex-1">
@@ -121,7 +121,7 @@ export default function TrackingMap() {
                       selectedVehicle.status === "in_transit"
                         ? "bg-emerald-100 text-emerald-700"
                         : selectedVehicle.status === "available"
-                        ? "bg-sky-100 text-sky-700"
+                        ? "bg-primary-100 text-primary-700"
                         : "bg-amber-100 text-amber-700"
                     }`}
                   >
@@ -159,7 +159,7 @@ export default function TrackingMap() {
             }}
             className={`bg-white rounded-2xl p-5 border cursor-pointer transition-all ${
               selectedVehicle?.id === vehicle.id
-                ? "border-sky-500 shadow-lg shadow-sky-500/10"
+                ? "border-primary-500 shadow-lg shadow-primary-500/10"
                 : "border-slate-100 shadow-sm hover:shadow-md"
             }`}
           >
@@ -169,7 +169,7 @@ export default function TrackingMap() {
                   vehicle.status === "in_transit"
                     ? "bg-emerald-100 text-emerald-700"
                     : vehicle.status === "available"
-                    ? "bg-sky-100 text-sky-700"
+                    ? "bg-primary-100 text-primary-700"
                     : "bg-amber-100 text-amber-700"
                 }`}
               >
@@ -188,7 +188,7 @@ export default function TrackingMap() {
                     vehicle.status === "in_transit"
                       ? "text-emerald-600"
                       : vehicle.status === "available"
-                      ? "text-sky-600"
+                      ? "text-primary-600"
                       : "text-amber-600"
                   }`}
                 >

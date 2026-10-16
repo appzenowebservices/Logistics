@@ -10,42 +10,42 @@ export default function ServicesGrid() {
       title: "Fleet & Maintenance Master",
       desc: "Complete registration records, FASTag auto-recharge alerts, PUC/Fitness permit tracking, tyre wear lifecycle, and breakdown logs.",
       icon: Truck,
-      color: "from-sky-500 to-blue-600",
+      color: "bg-primary-500",
       tag: "Module 4",
     },
     {
       title: "Warehouse & Barcode Engine",
       desc: "Inbound/outbound cross-docking, real-time QR scanner simulation, multi-tier rack & bin capacity tracking, and cycle count logs.",
       icon: Warehouse,
-      color: "from-emerald-500 to-teal-600",
+      color: "bg-emerald-500",
       tag: "Module 17",
     },
     {
       title: "CAN Bus & OBD IoT Platform",
       desc: "Live GPS corridor telemetry, engine RPM monitoring, harsh braking/acceleration alerts, and refrigerated van temperature gauges.",
       icon: Navigation,
-      color: "from-indigo-500 to-purple-600",
+      color: "bg-midnight-500",
       tag: "Module 19",
     },
     {
       title: "Corporate Freight Billing",
       desc: "Automated GST/TDS invoice generation, rate contract tariff engines, freight billing calculation, and multi-currency vendor settlement.",
       icon: ReceiptIndianRupee,
-      color: "from-amber-500 to-orange-600",
+      color: "bg-amber-500",
       tag: "Module 21",
     },
     {
       title: "Driver App (Android PWA)",
       desc: "Turn-by-turn navigation, instant e-POD photo upload, digital consignee signature capture, fuel receipt logging, and trip attendance.",
       icon: Users,
-      color: "from-rose-500 to-pink-600",
+      color: "bg-rose-500",
       tag: "Module 11",
     },
     {
       title: "16 Role-Based Access Portals",
       desc: "Strict defense-in-depth governance with tailored screens for Super Admin, CXO, Dispatcher, Warehouse Lead, Gate Security & Clients.",
       icon: ShieldCheck,
-      color: "from-cyan-500 to-sky-600",
+      color: "bg-secondary-500",
       tag: "Module 2",
     },
   ];
@@ -54,8 +54,8 @@ export default function ServicesGrid() {
     <section className="py-20 bg-surface px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-extrabold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-sky-600" /> Enterprise Architecture
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-100 text-primary-800 text-xs font-extrabold uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-primary-600" /> Enterprise Architecture
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
             25+ Integrated Logistics Modules
@@ -69,11 +69,11 @@ export default function ServicesGrid() {
           {modules.map((mod) => (
             <div
               key={mod.title}
-              className="bg-white rounded-3xl p-7 border border-sky-100 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-3xl p-7 border border-primary-100 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${mod.color} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
+                  <div className={`w-14 h-14 rounded-2xl ${mod.color} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                     <mod.icon className="w-7 h-7" />
                   </div>
                   <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-extrabold font-mono border border-slate-200">
@@ -81,7 +81,7 @@ export default function ServicesGrid() {
                   </span>
                 </div>
 
-                <h3 className="text-xl font-black text-slate-900 mb-3 group-hover:text-sky-600 transition-colors">
+                <h3 className="text-xl font-black text-slate-900 mb-3 group-hover:text-primary-600 transition-colors">
                   {mod.title}
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
@@ -92,7 +92,7 @@ export default function ServicesGrid() {
               <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
                 <Link
                   href="/services"
-                  className="text-xs font-bold text-sky-600 hover:text-sky-800 flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                  className="text-xs font-bold text-primary-600 hover:text-primary-800 flex items-center gap-1 group-hover:translate-x-1 transition-transform"
                 >
                   Explore Module Specs <ArrowRight className="w-3.5 h-3.5" />
                 </Link>

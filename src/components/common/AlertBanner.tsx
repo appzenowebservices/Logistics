@@ -39,13 +39,13 @@ export default function AlertBanner({ initialMessage }: AlertBannerProps) {
               ? 'bg-amber-50 border-amber-200 text-amber-900'
               : alert.type === 'success'
               ? 'bg-emerald-50 border-emerald-200 text-emerald-900'
-              : 'bg-sky-50 border-sky-200 text-sky-900'
+              : 'bg-primary-50 border-primary-200 text-primary-900'
           }`}
         >
           <div className="flex items-start gap-3">
             {alert.type === 'alert' && <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />}
             {alert.type === 'success' && <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />}
-            {alert.type === 'info' && <Info className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />}
+            {alert.type === 'info' && <Info className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" />}
             <div>
               <div className="font-semibold text-sm flex items-center gap-2">
                 <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-white/60">

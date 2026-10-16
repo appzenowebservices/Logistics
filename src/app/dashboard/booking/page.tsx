@@ -249,7 +249,7 @@ export default function BookingPage() {
 
   const getStatusBadge = (status: string) => {
     const statusConfig: Record<string, string> = {
-      booked: "bg-sky-100 text-sky-800 border-sky-200",
+      booked: "bg-primary-100 text-primary-800 border-primary-200",
       in_transit: "bg-purple-100 text-purple-800 border-purple-200",
       delivered: "bg-emerald-100 text-emerald-800 border-emerald-200",
       dispatched: "bg-amber-100 text-amber-800 border-amber-200",
@@ -264,7 +264,7 @@ export default function BookingPage() {
 
   const stats = [
     { label: "Total Bookings", value: bookings.length, color: "text-slate-900" },
-    { label: "Booked", value: bookings.filter((b) => b.status === "booked").length, color: "text-sky-600" },
+    { label: "Booked", value: bookings.filter((b) => b.status === "booked").length, color: "text-primary-600" },
     { label: "In Transit", value: bookings.filter((b) => b.status === "in_transit").length, color: "text-purple-600" },
     { label: "Delivered", value: bookings.filter((b) => b.status === "delivered").length, color: "text-emerald-600" },
   ];
@@ -272,17 +272,17 @@ export default function BookingPage() {
   return (
     <DashboardLayout>
       <div className="space-y-6 animate-in fade-in">
-        <div className="bg-gradient-to-r from-sky-800 to-blue-900 rounded-3xl p-6 text-white shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="bg-primary-800 rounded-3xl p-6 text-white shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
               Module 14 • Booking & Quotation
             </span>
             <h1 className="text-2xl font-black mt-2">Shipment Booking & AWB Management</h1>
-            <p className="text-xs text-sky-100 mt-1">Generate bookings, manage AWBs, rate calculator, and barcode labels.</p>
+            <p className="text-xs text-primary-100 mt-1">Generate bookings, manage AWBs, rate calculator, and barcode labels.</p>
           </div>
           <button
             onClick={openCreateForm}
-            className="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
+            className="px-5 py-2.5 bg-primary-500 hover:bg-primary-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
           >
             <Plus className="w-4 h-4" /> Add New Booking
           </button>
@@ -290,14 +290,14 @@ export default function BookingPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {stats.map((s) => (
-            <div key={s.label} className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+            <div key={s.label} className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
               <p className="text-xs font-semibold text-slate-500">{s.label}</p>
               <h3 className={`text-2xl font-black mt-1 ${s.color}`}>{s.value}</h3>
             </div>
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm space-y-4">
           <h3 className="font-bold text-base text-slate-900">Bookings Roster ({filteredBookings.length} shown)</h3>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-3">
@@ -308,7 +308,7 @@ export default function BookingPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by AWB, origin, destination..."
-                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full"
+                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full"
               />
             </div>
             <div className="flex items-center gap-2 text-xs">
@@ -317,14 +317,14 @@ export default function BookingPage() {
                 type="date"
                 value={dateFrom}
                 onChange={(e) => setDateFrom(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
               <label className="font-semibold text-slate-600">To:</label>
               <input
                 type="date"
                 value={dateTo}
                 onChange={(e) => setDateTo(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div className="relative flex-1 w-full md:w-auto">
@@ -334,7 +334,7 @@ export default function BookingPage() {
                 value={customerSearch}
                 onChange={(e) => setCustomerSearch(e.target.value)}
                 placeholder="Search by customer name..."
-                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full"
+                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full"
               />
             </div>
             <button
@@ -369,8 +369,8 @@ export default function BookingPage() {
               </thead>
               <tbody className="divide-y divide-slate-100 text-xs">
                 {filteredBookings.map((booking) => (
-                  <tr key={booking.id} onClick={() => openViewSidebar(booking)} className="hover:bg-sky-50/40 transition-colors cursor-pointer">
-                    <td className="py-3.5 font-mono font-bold text-sky-600">{booking.trackingNumber}</td>
+                  <tr key={booking.id} onClick={() => openViewSidebar(booking)} className="hover:bg-primary-50/40 transition-colors cursor-pointer">
+                    <td className="py-3.5 font-mono font-bold text-primary-600">{booking.trackingNumber}</td>
                     <td className="py-3.5 font-medium">{booking.origin}</td>
                     <td className="py-3.5 font-medium">{booking.destination}</td>
                     <td className="py-3.5">{booking.weight} Tons</td>
@@ -383,7 +383,7 @@ export default function BookingPage() {
                       <div className="flex items-center justify-center gap-2">
                         <button
                           onClick={(e) => { e.stopPropagation(); printBarcodeLabel(booking); }}
-                          className="p-2 rounded-lg bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors"
+                          className="p-2 rounded-lg bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors"
                           title="Print Barcode Label"
                         >
                           <Printer className="w-3.5 h-3.5" />
@@ -417,7 +417,7 @@ export default function BookingPage() {
         {(sidebarMode === "form" || sidebarMode === "edit") && (
         <div className="fixed inset-0 z-50 flex justify-end overflow-hidden">
           <div className="absolute inset-0 bg-black/40" onClick={closeSidebar} />
-          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
+          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in- duration-300">
             <div className="flex items-center justify-between p-5 border-b border-slate-100 shrink-0">
                 <h2 className="font-black text-base text-slate-900">
                   {sidebarMode === "form" ? "New Booking" : "Edit Booking"}
@@ -428,8 +428,8 @@ export default function BookingPage() {
               </div>
               <div className="flex-1 overflow-y-auto p-5">
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="bg-sky-50 rounded-2xl p-4 border border-sky-100 space-y-3">
-                    <h4 className="font-bold text-xs text-sky-900 uppercase tracking-wide flex items-center gap-2">
+                  <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 space-y-3">
+                    <h4 className="font-bold text-xs text-primary-900 uppercase tracking-wide flex items-center gap-2">
                       <Package className="w-4 h-4" /> Consignment Details
                     </h4>
                     <div>
@@ -440,7 +440,7 @@ export default function BookingPage() {
                         value={formData.origin}
                         onChange={(e) => setFormData({ ...formData, origin: e.target.value })}
                         placeholder="New Delhi (DEL-HUB-01)"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
                     <div>
@@ -451,7 +451,7 @@ export default function BookingPage() {
                         value={formData.destination}
                         onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                         placeholder="Mumbai (MUM-HUB-02)"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -462,7 +462,7 @@ export default function BookingPage() {
                           step="0.1"
                           value={formData.weight}
                           onChange={(e) => setFormData({ ...formData, weight: e.target.value })}
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
                         />
                       </div>
                       <div>
@@ -471,7 +471,7 @@ export default function BookingPage() {
                           type="number"
                           value={formData.value}
                           onChange={(e) => setFormData({ ...formData, value: e.target.value })}
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
                         />
                       </div>
                     </div>
@@ -481,7 +481,7 @@ export default function BookingPage() {
                         <select
                           value={formData.status}
                           onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
                         >
                           <option value="booked">Booked</option>
                           <option value="dispatched">Dispatched</option>
@@ -500,11 +500,11 @@ export default function BookingPage() {
                       </h4>
                       <div className="flex flex-wrap gap-4">
                         <label className="flex items-center gap-2 text-xs font-semibold cursor-pointer text-slate-700">
-                          <input type="checkbox" checked={fragile} onChange={(e) => setFragile(e.target.checked)} className="w-4 h-4 rounded text-sky-600" />
+                          <input type="checkbox" checked={fragile} onChange={(e) => setFragile(e.target.checked)} className="w-4 h-4 rounded text-primary-600" />
                           Fragile (+ INR 4,500)
                         </label>
                         <label className="flex items-center gap-2 text-xs font-semibold cursor-pointer text-slate-700">
-                          <input type="checkbox" checked={tempControl} onChange={(e) => setTempControl(e.target.checked)} className="w-4 h-4 rounded text-sky-600" />
+                          <input type="checkbox" checked={tempControl} onChange={(e) => setTempControl(e.target.checked)} className="w-4 h-4 rounded text-primary-600" />
                           Temperature Control (+ INR 8,000)
                         </label>
                       </div>
@@ -527,7 +527,7 @@ export default function BookingPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Save className="w-4 h-4" />
                       {isSubmitting ? "Saving..." : sidebarMode === "edit" ? "Update Booking" : "Create Booking"}
@@ -545,7 +545,7 @@ export default function BookingPage() {
         {sidebarMode === "view" && selectedBooking && (
         <div className="fixed inset-0 z-50 flex justify-end overflow-hidden">
           <div className="absolute inset-0 bg-black/40" onClick={closeSidebar} />
-          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
+          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in- duration-300">
             <div className="flex items-center justify-between p-5 border-b border-slate-100 shrink-0">
                 <h2 className="font-black text-base text-slate-900">Booking Details</h2>
                 <button onClick={closeSidebar} className="p-2 rounded-xl hover:bg-slate-100 transition-colors">
@@ -553,16 +553,16 @@ export default function BookingPage() {
                 </button>
               </div>
               <div className="flex-1 overflow-y-auto p-5">
-                <div className="bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-5 text-white shadow-lg mb-4">
+                <div className="bg-primary-600 rounded-2xl p-5 text-white shadow-lg mb-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-black text-lg font-mono">{selectedBooking.trackingNumber}</h3>
-                      <p className="text-xs text-sky-100">{selectedBooking.origin} ➔ {selectedBooking.destination}</p>
+                      <p className="text-xs text-primary-100">{selectedBooking.origin} ➔ {selectedBooking.destination}</p>
                     </div>
                     {getStatusBadge(selectedBooking.status)}
                   </div>
                 </div>
-                <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+                <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
                   <h4 className="font-bold text-sm text-slate-900">Shipment Information</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                     <div className="bg-slate-50 p-3 rounded-xl">
@@ -594,7 +594,7 @@ export default function BookingPage() {
                 <div className="flex gap-3 pt-4">
                   <button
                     onClick={() => printBarcodeLabel(selectedBooking)}
-                    className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all"
+                    className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all"
                   >
                     <Printer className="w-4 h-4" /> Print Barcode Label
                   </button>

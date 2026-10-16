@@ -48,10 +48,10 @@ export default function TrackingWidget() {
 
   return (
     <div className="max-w-5xl mx-auto -mt-10 relative z-30 px-4 sm:px-6">
-      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-sky-100">
+      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-primary-100">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
           <div>
-            <span className="text-[10px] font-bold text-sky-600 uppercase tracking-widest bg-sky-50 px-2.5 py-1 rounded-full border border-sky-100">
+            <span className="text-[10px] font-bold text-primary-600 uppercase tracking-widest bg-primary-50 px-2.5 py-1 rounded-full border border-primary-100">
               Real-Time AWB Tracking Portal
             </span>
             <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-1">
@@ -73,12 +73,12 @@ export default function TrackingWidget() {
               value={awbInput}
               onChange={(e) => setAwbInput(e.target.value)}
               placeholder="Enter AWB Tracking Number (e.g. ALMS-8839210 or DL-01-AB-1234)..."
-              className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all"
+              className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all"
             />
           </div>
           <button
             type="submit"
-            className="px-8 py-3.5 bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 text-white font-extrabold text-sm rounded-2xl shadow-lg shadow-sky-600/25 transition-all flex items-center justify-center gap-2"
+            className="px-8 py-3.5 bg-primary-600  text-white font-extrabold text-sm rounded-2xl shadow-lg shadow-primary-600/25 transition-all flex items-center justify-center gap-2"
           >
             <Navigation className="w-4 h-4" /> Track Now
           </button>
@@ -87,7 +87,7 @@ export default function TrackingWidget() {
         {/* Tracking Output Card */}
         {trackingResult && (
           <div className="mt-6 pt-6 border-t border-slate-100 animate-in fade-in">
-            <div className="bg-gradient-to-br from-sky-50 to-blue-50/50 rounded-2xl p-5 sm:p-6 border border-sky-100/80 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-primary-50 rounded-2xl p-5 sm:p-6 border border-primary-100/80 grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Col 1: Status */}
               <div className="space-y-2">
                 <span className="text-[11px] font-bold text-slate-500 uppercase">Tracking Number</span>
@@ -95,17 +95,17 @@ export default function TrackingWidget() {
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-200">
                   <Truck className="w-3.5 h-3.5" /> {trackingResult.status}
                 </div>
-                <p className="text-xs text-slate-600 font-medium">ETA: <strong className="text-sky-700">{trackingResult.eta}</strong></p>
+                <p className="text-xs text-slate-600 font-medium">ETA: <strong className="text-primary-700">{trackingResult.eta}</strong></p>
               </div>
 
               {/* Col 2: Route */}
               <div className="space-y-2">
                 <span className="text-[11px] font-bold text-slate-500 uppercase">Transit Corridor</span>
                 <div className="text-xs font-bold text-slate-800 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-sky-600 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-primary-600 shrink-0" />
                   {trackingResult.origin}
                 </div>
-                <div className="border-l-2 border-dashed border-sky-300 ml-1 pl-3 py-1 text-[11px] text-slate-500">
+                <div className="border-l-2 border-dashed border-primary-300 ml-1 pl-3 py-1 text-[11px] text-slate-500">
                   Carrier: {trackingResult.vehicle}
                 </div>
                 <div className="text-xs font-bold text-slate-800 flex items-center gap-2">
@@ -124,11 +124,11 @@ export default function TrackingWidget() {
                 <div>
                   <div className="flex justify-between text-xs font-bold mb-1">
                     <span>Journey Completed</span>
-                    <span className="text-sky-600">{trackingResult.progress}%</span>
+                    <span className="text-primary-600">{trackingResult.progress}%</span>
                   </div>
                   <div className="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
                     <div
-                      className="bg-gradient-to-r from-sky-500 to-blue-600 h-full transition-all duration-1000"
+                      className="bg-primary-500 h-full transition-all duration-1000"
                       style={{ width: `${trackingResult.progress}%` }}
                     />
                   </div>

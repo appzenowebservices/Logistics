@@ -300,7 +300,7 @@ export default function GeoIntelligenceCenter() {
       case "available":
         return "bg-emerald-100 text-emerald-700";
       case "in_transit":
-        return "bg-sky-100 text-sky-700";
+        return "bg-primary-100 text-primary-700";
       case "maintenance":
         return "bg-amber-100 text-amber-700";
       case "inactive":
@@ -323,13 +323,13 @@ export default function GeoIntelligenceCenter() {
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
               placeholder="Search pincode, city, branch, vehicle, driver..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
           <button
             onClick={handleSearch}
             disabled={loading || !query.trim()}
-            className="px-5 py-2.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-sm font-bold shadow-md flex items-center gap-2 hover:from-sky-500 hover:to-blue-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-5 py-2.5 bg-primary-600 text-white rounded-xl text-sm font-bold shadow-md flex items-center gap-2  transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? (
               <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -357,7 +357,7 @@ export default function GeoIntelligenceCenter() {
                 value={filters.state}
                 onChange={(e) => updateFilter("state", e.target.value)}
                 placeholder="Uttar Pradesh"
-                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -367,7 +367,7 @@ export default function GeoIntelligenceCenter() {
                 value={filters.city}
                 onChange={(e) => updateFilter("city", e.target.value)}
                 placeholder="Lucknow"
-                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -377,7 +377,7 @@ export default function GeoIntelligenceCenter() {
                 value={filters.pincode}
                 onChange={(e) => updateFilter("pincode", e.target.value)}
                 placeholder="226010"
-                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -387,7 +387,7 @@ export default function GeoIntelligenceCenter() {
                 value={filters.vehicleType}
                 onChange={(e) => updateFilter("vehicleType", e.target.value)}
                 placeholder="Truck, Van, Bike"
-                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
             <div>
@@ -395,7 +395,7 @@ export default function GeoIntelligenceCenter() {
               <select
                 value={filters.status}
                 onChange={(e) => updateFilter("status", e.target.value)}
-                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 <option value="">All</option>
                 <option value="active">Active</option>
@@ -410,7 +410,7 @@ export default function GeoIntelligenceCenter() {
               <select
                 value={filters.radius}
                 onChange={(e) => updateFilter("radius", Number(e.target.value))}
-                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 <option value="5">5 KM</option>
                 <option value="10">10 KM</option>
@@ -457,7 +457,7 @@ export default function GeoIntelligenceCenter() {
           {!mapLoaded && (
             <div className="absolute inset-0 z-[999] bg-slate-50 flex items-center justify-center">
               <div className="flex items-center gap-3 bg-white px-5 py-3 rounded-xl shadow-lg border border-slate-200">
-                <div className="w-5 h-5 border-2 border-sky-600 border-t-transparent rounded-full animate-spin" />
+                <div className="w-5 h-5 border-2 border-primary-600 border-t-transparent rounded-full animate-spin" />
                 <span className="text-sm font-bold text-slate-700">Loading map...</span>
               </div>
             </div>
@@ -517,7 +517,7 @@ export default function GeoIntelligenceCenter() {
                       mapInstanceRef.current.setView([entity.lat, entity.lng], 15);
                     }
                   }}
-                  className="p-4 hover:bg-sky-50 cursor-pointer transition-colors group border-b border-slate-100 last:border-b-0"
+                  className="p-4 hover:bg-primary-50 cursor-pointer transition-colors group border-b border-slate-100 last:border-b-0"
                 >
                   <div className="flex items-start gap-3">
                     <div
@@ -540,7 +540,7 @@ export default function GeoIntelligenceCenter() {
                           </span>
                         )}
                       </div>
-                      <h4 className="font-bold text-sm text-slate-900 truncate group-hover:text-sky-700 transition-colors">
+                      <h4 className="font-bold text-sm text-slate-900 truncate group-hover:text-primary-700 transition-colors">
                         {entity.name}
                       </h4>
                       <p className="text-xs text-slate-500 truncate mt-0.5">{entity.subtitle}</p>
@@ -606,7 +606,7 @@ export default function GeoIntelligenceCenter() {
                     href={`https://www.openstreetmap.org/?mlat=${selectedEntity.lat}&mlon=${selectedEntity.lng}#map=16/${selectedEntity.lat}/${selectedEntity.lng}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] font-bold text-sky-600 hover:text-sky-700 flex items-center gap-1"
+                    className="text-[11px] font-bold text-primary-600 hover:text-primary-700 flex items-center gap-1"
                   >
                     <ExternalLink className="w-3 h-3" /> Open in OSM
                   </a>
@@ -665,7 +665,7 @@ export default function GeoIntelligenceCenter() {
                     }, 300);
                   }
                 }}
-                className="px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold rounded-lg flex items-center gap-1.5 transition-colors"
+                className="px-3 py-1.5 bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold rounded-lg flex items-center gap-1.5 transition-colors"
               >
                 <Navigation className="w-3.5 h-3.5" />
                 Focus on Map

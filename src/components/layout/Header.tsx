@@ -156,12 +156,12 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-sky-100 shadow-sm px-4 lg:px-6 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-primary-100 shadow-sm px-4 lg:px-6 h-16 flex items-center justify-between">
       {/* Left side: Sidebar Toggle & Global Search */}
       <div className="flex items-center gap-4 flex-1 max-w-xl">
         <button
           onClick={onToggleSidebar}
-          className="p-2 rounded-xl bg-sky-50 text-sky-700 hover:bg-sky-100 transition-colors shadow-sm"
+          className="p-2 rounded-xl bg-primary-50 text-primary-700 hover:bg-primary-100 transition-colors shadow-sm"
           aria-label="Toggle Sidebar"
         >
           <Menu className="w-5 h-5" />
@@ -172,19 +172,19 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
           <input
             type="text"
             placeholder="Global search AWBs, Vehicles, Drivers, Orders..."
-            className="w-full pl-9 pr-4 py-2 text-xs font-medium bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500/30 focus:border-sky-500 transition-all placeholder:text-slate-400"
+            className="w-full pl-9 pr-4 py-2 text-xs font-medium bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 transition-all placeholder:text-slate-400"
           />
         </div>
       </div>
 
       {/* Middle: Branch Selector (Role based) */}
-      <div className="hidden lg:flex items-center gap-2 bg-sky-50/80 border border-sky-100 px-3 py-1.5 rounded-xl text-xs font-medium text-sky-900">
-        <MapPin className="w-3.5 h-3.5 text-sky-600" />
+      <div className="hidden lg:flex items-center gap-2 bg-primary-50/80 border border-primary-100 px-3 py-1.5 rounded-xl text-xs font-medium text-primary-900">
+        <MapPin className="w-3.5 h-3.5 text-primary-600" />
         <span>Branch:</span>
         <select
           value={selectedBranch}
           onChange={(e) => setSelectedBranch(e.target.value)}
-          className="bg-transparent font-semibold text-sky-950 focus:outline-none cursor-pointer"
+          className="bg-transparent font-semibold text-primary-950 focus:outline-none cursor-pointer"
         >
           <option value="Delhi National Hub (HQ)">DEL-HUB-01 • Delhi National Hub</option>
           <option value="Mumbai Western Port Hub">MUM-HUB-02 • Mumbai Port Hub</option>
@@ -196,7 +196,7 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
       {/* Right side controls */}
       <div className="flex items-center gap-2 lg:gap-3">
         {/* Weather optional widget */}
-        <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 bg-gradient-to-r from-amber-50 to-sky-50 border border-amber-100/60 rounded-xl text-xs font-medium text-slate-700">
+        <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 border border-amber-100/60 rounded-xl text-xs font-medium text-slate-700">
           <CloudSun className="w-4 h-4 text-amber-500" />
           <span>Delhi 28°C Clear</span>
         </div>
@@ -205,7 +205,7 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
         <div className="relative">
           <button
             onClick={() => setShowQuickActions(!showQuickActions)}
-            className="flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-sky-600 to-blue-600 text-white font-semibold text-xs rounded-xl shadow-md shadow-sky-500/20 hover:from-sky-500 hover:to-blue-500 transition-all"
+            className="flex items-center gap-1 px-3 py-1.5 bg-primary-600 text-white font-semibold text-xs rounded-xl shadow-md shadow-primary-500/20  transition-all"
           >
             <Plus className="w-4 h-4" />
             <span className="hidden md:inline">Quick Action</span>
@@ -222,9 +222,9 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
                   <button
                     key={action.label}
                     onClick={() => { setShowQuickActions(false); router.push(action.href); }}
-                    className="w-full flex items-center gap-2 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-700"
+                    className="w-full flex items-center gap-2 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700"
                   >
-                    <Icon className="w-4 h-4 text-sky-600" />
+                    <Icon className="w-4 h-4 text-primary-600" />
                     {action.label}
                   </button>
                 );
@@ -236,7 +236,7 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
         {/* Tasks icon */}
         <button className="p-2 rounded-xl text-slate-600 hover:bg-slate-100 hidden sm:block relative" title="Tasks">
           <CheckSquare className="w-4 h-4" />
-          <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-sky-500 rounded-full" />
+          <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-primary-500 rounded-full" />
         </button>
 
         {/* Calendar icon */}
@@ -259,16 +259,16 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
             <div className="absolute right-0 mt-2 w-72 bg-white rounded-2xl shadow-xl border border-slate-100 p-3 z-50">
               <div className="flex items-center justify-between pb-2 border-b border-slate-100">
                 <span className="font-bold text-xs text-slate-800">Recent Notifications</span>
-                <span className="text-[10px] bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full font-bold">3 Unread</span>
+                <span className="text-[10px] bg-primary-100 text-primary-800 px-2 py-0.5 rounded-full font-bold">3 Unread</span>
               </div>
               <div className="mt-2 space-y-2 max-h-64 overflow-y-auto">
                 <div className="p-2 bg-amber-50 rounded-lg text-xs">
                   <p className="font-semibold text-amber-900">Harsh Braking Alert</p>
                   <p className="text-[11px] text-amber-800 mt-0.5">DL-01-AB-1234 reported rapid deceleration near Jaipur.</p>
                 </div>
-                <div className="p-2 bg-sky-50 rounded-lg text-xs">
-                  <p className="font-semibold text-sky-900">New Express Booking</p>
-                  <p className="text-[11px] text-sky-800 mt-0.5">Reliance Retail scheduled priority pickup.</p>
+                <div className="p-2 bg-primary-50 rounded-lg text-xs">
+                  <p className="font-semibold text-primary-900">New Express Booking</p>
+                  <p className="text-[11px] text-primary-800 mt-0.5">Reliance Retail scheduled priority pickup.</p>
                 </div>
               </div>
             </div>
@@ -290,14 +290,14 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
             onClick={() => setShowProfileMenu(!showProfileMenu)}
             className="flex items-center gap-2 p-1.5 rounded-xl hover:bg-slate-100 transition-colors"
           >
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-600 to-blue-800 flex items-center justify-center text-white font-bold text-xs shadow-sm">
+            <div className="w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold text-xs shadow-sm">
               {user?.name ? user.name.charAt(0).toUpperCase() : "U"}
             </div>
             <div className="hidden md:block text-left">
               <p className="text-xs font-bold text-slate-800 leading-tight truncate max-w-[120px]">
                 {user?.name || "Aditya Sharma"}
               </p>
-              <p className="text-[10px] font-medium text-sky-600 capitalize truncate max-w-[120px]">
+              <p className="text-[10px] font-medium text-primary-600 capitalize truncate max-w-[120px]">
                 {user?.roleTitle || user?.role?.replace(/_/g, ' ') || "Super Admin"}
               </p>
             </div>
@@ -309,16 +309,16 @@ export default function Header({ sidebarOpen, onToggleSidebar, user }: HeaderPro
               <div className="px-3 py-2 border-b border-slate-100 bg-slate-50/50 rounded-xl mb-1">
                 <p className="text-xs font-bold text-slate-900">{user?.name || "Aditya Sharma"}</p>
                 <p className="text-[11px] text-slate-500 truncate">{user?.email || "superadmin@alms.com"}</p>
-                <span className="mt-1 inline-block px-2 py-0.5 bg-sky-100 text-sky-800 rounded text-[10px] font-bold">
+                <span className="mt-1 inline-block px-2 py-0.5 bg-primary-100 text-primary-800 rounded text-[10px] font-bold">
                   Role: {user?.roleTitle || user?.role?.replace(/_/g, ' ')}
                 </span>
               </div>
 
               <button
                 onClick={() => { setShowProfileMenu(false); router.push("/"); }}
-                className="w-full flex items-center gap-2 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-700 rounded-xl"
+                className="w-full flex items-center gap-2 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-700 rounded-xl"
               >
-                <User className="w-4 h-4 text-sky-600" />
+                <User className="w-4 h-4 text-primary-600" />
                 Switch Role / Login Screen
               </button>
 

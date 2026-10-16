@@ -409,8 +409,8 @@ export default function PincodeAreasPageClient() {
 
   const renderPincodeForm = (mode: "form" | "edit") => (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="bg-sky-50 rounded-2xl p-4 border border-sky-100 space-y-3">
-        <h4 className="font-bold text-xs text-sky-900 uppercase tracking-wide flex items-center gap-2">
+      <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 space-y-3">
+        <h4 className="font-bold text-xs text-primary-900 uppercase tracking-wide flex items-center gap-2">
           <MapPin className="w-4 h-4" /> Basic Information
         </h4>
         <div>
@@ -423,7 +423,7 @@ export default function PincodeAreasPageClient() {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             placeholder="Connaught Place"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
       </div>
@@ -443,7 +443,7 @@ export default function PincodeAreasPageClient() {
               value={formData.city}
               onChange={(e) => setFormData({ ...formData, city: e.target.value })}
               placeholder="New Delhi"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <div>
@@ -456,7 +456,7 @@ export default function PincodeAreasPageClient() {
               value={formData.state}
               onChange={(e) => setFormData({ ...formData, state: e.target.value })}
               placeholder="Delhi"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <div>
@@ -471,11 +471,11 @@ export default function PincodeAreasPageClient() {
                 onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
                 placeholder="110001"
                 onBlur={(e) => fetchPincodeDetails(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
               {isFetchingPincode && (
                 <div className="absolute right-3 top-3">
-                  <Loader2 className="w-4 h-4 text-sky-600 animate-spin" />
+                  <Loader2 className="w-4 h-4 text-primary-600 animate-spin" />
                 </div>
               )}
             </div>
@@ -490,7 +490,7 @@ export default function PincodeAreasPageClient() {
             value={formData.country}
             onChange={(e) => setFormData({ ...formData, country: e.target.value })}
             placeholder="India"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
         </div>
@@ -541,8 +541,8 @@ export default function PincodeAreasPageClient() {
           </div>
        </div>
 
-       <div className="bg-indigo-50 rounded-2xl p-4 border border-indigo-100 space-y-3">
-        <h4 className="font-bold text-xs text-indigo-900 uppercase tracking-wide flex items-center gap-2">
+       <div className="bg-midnight-50 rounded-2xl p-4 border border-midnight-100 space-y-3">
+        <h4 className="font-bold text-xs text-midnight-900 uppercase tracking-wide flex items-center gap-2">
           <Globe className="w-4 h-4" /> Branch Hierarchy
         </h4>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -553,7 +553,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchRegion}
               onChange={(e) => setFormData({ ...formData, branchRegion: e.target.value })}
               placeholder="North"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
           <div>
@@ -563,7 +563,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchZone}
               onChange={(e) => setFormData({ ...formData, branchZone: e.target.value })}
               placeholder="Delhi NCR"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
           <div>
@@ -573,7 +573,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchDivision}
               onChange={(e) => setFormData({ ...formData, branchDivision: e.target.value })}
               placeholder="Metropolitan"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
           <div>
@@ -583,7 +583,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchDepartment}
               onChange={(e) => setFormData({ ...formData, branchDepartment: e.target.value })}
               placeholder="Operations"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
           <div>
@@ -593,7 +593,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchSection}
               onChange={(e) => setFormData({ ...formData, branchSection: e.target.value })}
               placeholder="North Section"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
           <div>
@@ -603,7 +603,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchUnit}
               onChange={(e) => setFormData({ ...formData, branchUnit: e.target.value })}
               placeholder="Unit-A"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
           <div>
@@ -613,7 +613,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchTeam}
               onChange={(e) => setFormData({ ...formData, branchTeam: e.target.value })}
               placeholder="Team-1"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
           <div>
@@ -623,7 +623,7 @@ export default function PincodeAreasPageClient() {
               value={formData.branchGroup}
               onChange={(e) => setFormData({ ...formData, branchGroup: e.target.value })}
               placeholder="Group-A"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-midnight-500"
             />
           </div>
         </div>
@@ -666,7 +666,7 @@ export default function PincodeAreasPageClient() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Save className="w-4 h-4" />
           {isSubmitting ? (mode === "edit" ? "Updating..." : "Creating...") : mode === "edit" ? "Update Area" : "Create Area"}
@@ -689,7 +689,7 @@ export default function PincodeAreasPageClient() {
 
     return (
       <div className="space-y-6">
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-2xl p-5 text-white shadow-lg">
+        <div className="bg-emerald-600 rounded-2xl p-5 text-white shadow-lg">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
               <MapPin className="w-6 h-6" />
@@ -701,7 +701,7 @@ export default function PincodeAreasPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <MapPin className="w-4 h-4 text-emerald-600" /> Location
           </h4>
@@ -725,7 +725,7 @@ export default function PincodeAreasPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <Building2 className="w-4 h-4 text-purple-600" /> Branch Information
           </h4>
@@ -749,7 +749,7 @@ export default function PincodeAreasPageClient() {
               <p className="text-[10px] font-bold text-slate-500 uppercase mb-2">Branches in this Area ({pincode.branches.length})</p>
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {pincode.branches.map((branch) => (
-                  <div key={branch.id} className="bg-sky-50 p-2.5 rounded-lg">
+                  <div key={branch.id} className="bg-primary-50 p-2.5 rounded-lg">
                     <p className="font-semibold text-slate-800 text-xs">{branch.name}</p>
                     <p className="text-[10px] text-slate-600">{branch.code} • {branch.city}, {branch.state}</p>
                   </div>
@@ -759,9 +759,9 @@ export default function PincodeAreasPageClient() {
           )}
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-            <Globe className="w-4 h-4 text-indigo-600" /> Branch Hierarchy
+            <Globe className="w-4 h-4 text-midnight-600" /> Branch Hierarchy
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
             <div className="bg-slate-50 p-3 rounded-xl">
@@ -798,7 +798,7 @@ export default function PincodeAreasPageClient() {
         <div className="flex gap-3 pt-2">
           <button
             onClick={() => openEditForm(pincode)}
-            className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all"
+            className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all"
           >
             <Edit2 className="w-4 h-4" /> Edit Area
           </button>
@@ -815,7 +815,7 @@ export default function PincodeAreasPageClient() {
 
   return (
     <div className="space-y-6 animate-in fade-in">
-      <div className="bg-gradient-to-r from-emerald-900 to-teal-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-emerald-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
             Master Data • Pincode Areas
@@ -832,23 +832,23 @@ export default function PincodeAreasPageClient() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Total Areas</p>
           <h3 className="text-2xl font-black text-slate-900 mt-1">{pincodeAreas.length}</h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">States Covered</p>
           <h3 className="text-2xl font-black text-emerald-600 mt-1">
             {new Set(pincodeAreas.map((p) => p.state)).size}
           </h3>
         </div>
-<div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+<div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
            <p className="text-xs font-semibold text-slate-500">With Branch Mapping</p>
-           <h3 className="text-2xl font-black text-sky-600 mt-1">
+           <h3 className="text-2xl font-black text-primary-600 mt-1">
              {pincodeAreas.filter((p) => branchesQuery.data?.some((b: any) => b.pincodeAreaId?.toString() === p.id)).length}
            </h3>
          </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Active Areas</p>
           <h3 className="text-2xl font-black text-amber-600 mt-1">
             {pincodeAreas.filter((p) => p.branchStatus === "active").length}
@@ -856,7 +856,7 @@ export default function PincodeAreasPageClient() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
           <div>
             <h3 className="font-bold text-base text-slate-900">Pincode Areas ({filteredPincodes.length} Total)</h3>
@@ -880,7 +880,7 @@ export default function PincodeAreasPageClient() {
             <select
               value={searchFilter}
               onChange={(e) => setSearchFilter(e.target.value as any)}
-              className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="px-3 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <option value="all">All Fields</option>
               <option value="name">By Name</option>
@@ -895,7 +895,7 @@ export default function PincodeAreasPageClient() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search areas..."
-                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full sm:w-64"
+                className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full sm:w-64"
               />
             </div>
           </div>
@@ -918,10 +918,10 @@ export default function PincodeAreasPageClient() {
                 <tr
                   key={pincode.id}
                   onClick={() => openViewSidebar(pincode)}
-                  className="hover:bg-sky-50/40 transition-colors cursor-pointer"
+                  className="hover:bg-primary-50/40 transition-colors cursor-pointer"
                 >
                   <td className="py-3.5 font-bold text-slate-900">{pincode.name}</td>
-                  <td className="py-3.5 font-mono text-sky-600">{pincode.pincode}</td>
+                  <td className="py-3.5 font-mono text-primary-600">{pincode.pincode}</td>
                   <td className="py-3.5 font-medium">
                     {pincode.city}, {pincode.state}
                   </td>
@@ -944,7 +944,7 @@ export default function PincodeAreasPageClient() {
                           e.stopPropagation();
                           openViewSidebar(pincode);
                         }}
-                        className="p-2 rounded-lg bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors"
+                        className="p-2 rounded-lg bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors"
                         title="View Details"
                       >
                         <Eye className="w-3.5 h-3.5" />
@@ -989,7 +989,7 @@ export default function PincodeAreasPageClient() {
         createPortal(
           <>
             <div className="fixed inset-0 z-50 bg-black/40" onClick={closeSidebar} />
-            <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl animate-in slide-in-from-right duration-300 z-[51] opacity-100 !block">
+            <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl animate-in slide-in- duration-300 z-[51] opacity-100 !block">
               <div className="flex items-center justify-between p-5 border-b border-slate-100 h-[73px] shrink-0">
                 <h2 className="font-black text-base text-slate-900">
                   {sidebarMode === "form"

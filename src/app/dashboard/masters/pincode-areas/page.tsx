@@ -26,14 +26,14 @@ export default function MastersPage() {
   return (
     <DashboardLayout>
       <div className="space-y-6 animate-in fade-in">
-        <div className="bg-gradient-to-r from-sky-900 to-indigo-900 rounded-3xl p-6 text-white shadow-xl">
+        <div className="bg-primary-900 rounded-3xl p-6 text-white shadow-xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
                 Master Data Management
               </span>
               <h1 className="text-2xl font-black mt-2">Masters Dashboard</h1>
-              <p className="text-xs text-sky-100 mt-1">Manage branches, managers, and pincode areas across the organization.</p>
+              <p className="text-xs text-primary-100 mt-1">Manage branches, managers, and pincode areas across the organization.</p>
             </div>
           </div>
           

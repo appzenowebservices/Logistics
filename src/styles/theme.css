@@ -114,68 +114,18 @@
 }
 
 /* ==========================================================================
-   LEGACY ALIASES — non-breaking adoption
+   DERIVED ALIASES — @theme inline
    --------------------------------------------------------------------------
-   The existing UI was authored with Tailwind's `sky` / `blue` / `indigo` /
-   `cyan` utility families. We alias those families onto the brand ramps so
-   every existing class (bg-sky-600, from-blue-800, text-indigo-900, ...)
-   renders the new palette with zero markup churn.
+   `inline` means the token value is substituted directly into the generated
+   utility (e.g. `text-brand` -> `color: var(--color-primary-600)`), so these
+   stay in lockstep with the ramps above without duplicating hex values.
 
-   `@theme inline` is the documented way to reference another theme token.
+   NOTE: the migration off Tailwind's stock `sky` / `blue` / `indigo` / `cyan`
+   families is complete — every component now uses the semantic tokens
+   (`primary-*`, `navy-*`, `midnight-*`, `secondary-*`, `accent-*`).
+   Do not reintroduce those legacy families in new markup.
    ========================================================================== */
 @theme inline {
-  /* sky → primary */
-  --color-sky-50: var(--color-primary-50);
-  --color-sky-100: var(--color-primary-100);
-  --color-sky-200: var(--color-primary-200);
-  --color-sky-300: var(--color-primary-300);
-  --color-sky-400: var(--color-primary-400);
-  --color-sky-500: var(--color-primary-500);
-  --color-sky-600: var(--color-primary-600);
-  --color-sky-700: var(--color-primary-700);
-  --color-sky-800: var(--color-primary-800);
-  --color-sky-900: var(--color-primary-900);
-  --color-sky-950: var(--color-primary-950);
-
-  /* blue → navy */
-  --color-blue-50: var(--color-navy-50);
-  --color-blue-100: var(--color-navy-100);
-  --color-blue-200: var(--color-navy-200);
-  --color-blue-300: var(--color-navy-300);
-  --color-blue-400: var(--color-navy-400);
-  --color-blue-500: var(--color-navy-500);
-  --color-blue-600: var(--color-navy-600);
-  --color-blue-700: var(--color-navy-700);
-  --color-blue-800: var(--color-navy-800);
-  --color-blue-900: var(--color-navy-900);
-  --color-blue-950: var(--color-navy-950);
-
-  /* indigo → midnight */
-  --color-indigo-50: var(--color-midnight-50);
-  --color-indigo-100: var(--color-midnight-100);
-  --color-indigo-200: var(--color-midnight-200);
-  --color-indigo-300: var(--color-midnight-300);
-  --color-indigo-400: var(--color-midnight-400);
-  --color-indigo-500: var(--color-midnight-500);
-  --color-indigo-600: var(--color-midnight-600);
-  --color-indigo-700: var(--color-midnight-700);
-  --color-indigo-800: var(--color-midnight-800);
-  --color-indigo-900: var(--color-midnight-900);
-  --color-indigo-950: var(--color-midnight-950);
-
-  /* cyan → secondary */
-  --color-cyan-50: var(--color-secondary-50);
-  --color-cyan-100: var(--color-secondary-100);
-  --color-cyan-200: var(--color-secondary-200);
-  --color-cyan-300: var(--color-secondary-300);
-  --color-cyan-400: var(--color-secondary-400);
-  --color-cyan-500: var(--color-secondary-500);
-  --color-cyan-600: var(--color-secondary-600);
-  --color-cyan-700: var(--color-secondary-700);
-  --color-cyan-800: var(--color-secondary-800);
-  --color-cyan-900: var(--color-secondary-900);
-  --color-cyan-950: var(--color-secondary-950);
-
   /* Semantic aliases — preferred names for new code */
   --color-brand: var(--color-primary-600);
   --color-brand-strong: var(--color-primary-700);

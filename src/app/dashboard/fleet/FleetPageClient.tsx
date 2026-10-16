@@ -228,7 +228,7 @@ export default function FleetPageClient() {
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       available: "bg-emerald-100 text-emerald-800 border-emerald-200",
-      in_transit: "bg-sky-100 text-sky-800 border-sky-200",
+      in_transit: "bg-primary-100 text-primary-800 border-primary-200",
       maintenance: "bg-amber-100 text-amber-800 border-amber-200",
       dispatched: "bg-purple-100 text-purple-800 border-purple-200",
     };
@@ -253,7 +253,7 @@ export default function FleetPageClient() {
             value={formData.registrationNumber}
             onChange={(e) => setFormData({ ...formData, registrationNumber: e.target.value })}
             placeholder="DL-01-AB-1234"
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -266,7 +266,7 @@ export default function FleetPageClient() {
           <select
             value={formData.type}
             onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           >
             <option>Container (40ft)</option>
             <option>Mini Truck</option>
@@ -287,7 +287,7 @@ export default function FleetPageClient() {
             value={formData.model}
             onChange={(e) => setFormData({ ...formData, model: e.target.value })}
             placeholder="Tata Prima 4928.S"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
       </div>
@@ -302,7 +302,7 @@ export default function FleetPageClient() {
             value={formData.capacity}
             onChange={(e) => setFormData({ ...formData, capacity: e.target.value })}
             placeholder="28.50"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
 
@@ -313,7 +313,7 @@ export default function FleetPageClient() {
           <select
             value={formData.status}
             onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           >
             <option value="available">Available</option>
             <option value="in_transit">In Transit</option>
@@ -334,7 +334,7 @@ export default function FleetPageClient() {
             value={formData.gpsDeviceId}
             onChange={(e) => setFormData({ ...formData, gpsDeviceId: e.target.value })}
             placeholder="GPS-IOT-9901"
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
       </div>
@@ -350,7 +350,7 @@ export default function FleetPageClient() {
               type="date"
               value={formData.lastMaintenance}
               onChange={(e) => setFormData({ ...formData, lastMaintenance: e.target.value })}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -365,7 +365,7 @@ export default function FleetPageClient() {
               type="date"
               value={formData.insuranceExpiry}
               onChange={(e) => setFormData({ ...formData, insuranceExpiry: e.target.value })}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
         </div>
@@ -380,7 +380,7 @@ export default function FleetPageClient() {
           <select
             value={formData.driverId}
             onChange={(e) => setFormData({ ...formData, driverId: e.target.value })}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 appearance-none"
           >
             <option value="">Select Driver</option>
             {driversQuery.data?.map((driver: any) => (
@@ -401,7 +401,7 @@ export default function FleetPageClient() {
           <select
             value={formData.branchId}
             onChange={(e) => setFormData({ ...formData, branchId: e.target.value })}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 appearance-none"
           >
             <option value="">Select Branch</option>
             {branchesQuery.data?.map((branch: any) => (
@@ -417,7 +417,7 @@ export default function FleetPageClient() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Save className="w-4 h-4" />
           {isSubmitting ? (mode === "edit" ? "Updating..." : "Registering...") : mode === "edit" ? "Update Vehicle" : "Register Vehicle"}
@@ -440,22 +440,22 @@ export default function FleetPageClient() {
 
     return (
       <div className="space-y-6">
-        <div className="bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-5 text-white shadow-lg">
+        <div className="bg-primary-600 rounded-2xl p-5 text-white shadow-lg">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
               <Truck className="w-6 h-6" />
             </div>
             <div>
               <h3 className="font-black text-lg">{vehicle.registrationNumber}</h3>
-              <p className="text-xs text-sky-100">{vehicle.type}</p>
+              <p className="text-xs text-primary-100">{vehicle.type}</p>
             </div>
           </div>
           {getStatusBadge(vehicle.status)}
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-            <FileText className="w-4 h-4 text-sky-600" /> Basic Information
+            <FileText className="w-4 h-4 text-primary-600" /> Basic Information
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="bg-slate-50 p-3 rounded-xl">
@@ -472,12 +472,12 @@ export default function FleetPageClient() {
             </div>
             <div className="bg-slate-50 p-3 rounded-xl">
               <p className="text-[10px] font-bold text-slate-400 uppercase">GPS Device</p>
-              <p className="font-mono font-semibold text-sky-600 mt-1">{vehicle.gpsDeviceId || "N/A"}</p>
+              <p className="font-mono font-semibold text-primary-600 mt-1">{vehicle.gpsDeviceId || "N/A"}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <Calendar className="w-4 h-4 text-emerald-600" /> Important Dates
           </h4>
@@ -497,7 +497,7 @@ export default function FleetPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <Activity className="w-4 h-4 text-purple-600" /> Assignment Details
           </h4>
@@ -513,7 +513,7 @@ export default function FleetPageClient() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm space-y-4">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm space-y-4">
           <h4 className="font-bold text-sm text-slate-900 flex items-center gap-2">
             <Gauge className="w-4 h-4 text-amber-600" /> System Information
           </h4>
@@ -534,7 +534,7 @@ export default function FleetPageClient() {
         <div className="flex gap-3 pt-2">
           <button
             onClick={() => openEditForm(vehicle)}
-            className="flex-1 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 transition-all"
+            className="flex-1 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary-600/25 flex items-center justify-center gap-2 transition-all"
           >
             <Edit2 className="w-4 h-4" /> Edit Vehicle
           </button>
@@ -552,17 +552,17 @@ export default function FleetPageClient() {
   return (
     <div className="space-y-6 animate-in fade-in">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-sky-900 via-blue-900 to-indigo-950 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-primary-900 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase bg-white/20">
             Module 4 • Fleet Ecosystem
           </span>
           <h1 className="text-2xl font-black mt-2">Pan-India Fleet Master & Documents</h1>
-          <p className="text-xs text-sky-200 mt-1">Manage registration, FASTag, PUC/Fitness permits, tyres, and CAN/OBD IoT sensors.</p>
+          <p className="text-xs text-primary-200 mt-1">Manage registration, FASTag, PUC/Fitness permits, tyres, and CAN/OBD IoT sensors.</p>
         </div>
         <button
           onClick={openCreateForm}
-          className="px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
+          className="px-5 py-2.5 bg-primary-500 hover:bg-primary-400 text-white font-bold text-xs rounded-xl shadow flex items-center gap-2 transition-all whitespace-nowrap"
         >
           <Plus className="w-4 h-4" /> Register New Vehicle
         </button>
@@ -570,23 +570,23 @@ export default function FleetPageClient() {
 
       {/* Fleet Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Total Vehicles</p>
           <h3 className="text-2xl font-black text-slate-900 mt-1">{vehicles.length}</h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Available</p>
           <h3 className="text-2xl font-black text-emerald-600 mt-1">
             {vehicles.filter((v) => v.status === "available").length}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">In Transit</p>
-          <h3 className="text-2xl font-black text-sky-600 mt-1">
+          <h3 className="text-2xl font-black text-primary-600 mt-1">
             {vehicles.filter((v) => v.status === "in_transit").length}
           </h3>
         </div>
-        <div className="bg-white rounded-2xl p-5 border border-sky-100 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border border-primary-100 shadow-sm">
           <p className="text-xs font-semibold text-slate-500">Maintenance</p>
           <h3 className="text-2xl font-black text-amber-600 mt-1">
             {vehicles.filter((v) => v.status === "maintenance").length}
@@ -597,15 +597,15 @@ export default function FleetPageClient() {
       {/* Assignment Details Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Branch Assignment Panel */}
-        <div className="bg-white rounded-2xl p-5 border-t-4 border-blue-500 shadow-sm">
+        <div className="bg-white rounded-2xl p-5 border-t-4 border-navy-500 shadow-sm">
           <h3 className="font-bold text-sm text-slate-900 flex items-center gap-2 mb-4">
-            <Building2 className="w-4 h-4 text-blue-600" /> Branch Assignment
+            <Building2 className="w-4 h-4 text-navy-600" /> Branch Assignment
           </h3>
           <div className="space-y-3">
             <select
               value={selectedBranchId}
               onChange={(e) => setSelectedBranchId(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-navy-500 appearance-none"
             >
               <option value="">Select Branch</option>
               {branchesQuery.data?.map((branch: any) => (
@@ -761,7 +761,7 @@ export default function FleetPageClient() {
                     </div>
                     <div className="bg-slate-50 p-3 rounded-xl">
                       <p className="text-[10px] font-bold text-slate-400 uppercase">GPS Device ID</p>
-                      <p className="font-mono font-semibold text-sky-600 mt-1">{(assignmentVehicleQuery.data as any).gpsDeviceId || "N/A"}</p>
+                      <p className="font-mono font-semibold text-primary-600 mt-1">{(assignmentVehicleQuery.data as any).gpsDeviceId || "N/A"}</p>
                     </div>
                     <div className="bg-slate-50 p-3 rounded-xl">
                       <p className="text-[10px] font-bold text-slate-400 uppercase">Status</p>
@@ -784,7 +784,7 @@ export default function FleetPageClient() {
       </div>
 
       {/* Active Fleet Roster Table */}
-      <div className="bg-white rounded-2xl p-6 border border-sky-100 shadow-sm">
+      <div className="bg-white rounded-2xl p-6 border border-primary-100 shadow-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
           <h3 className="font-bold text-base text-slate-900">Active Fleet Roster ({vehicles.length} Total Vehicles)</h3>
           <div className="relative">
@@ -794,7 +794,7 @@ export default function FleetPageClient() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by reg, type, model, status..."
-              className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500 w-full sm:w-80"
+              className="pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500 w-full sm:w-80"
             />
           </div>
         </div>
@@ -816,16 +816,16 @@ export default function FleetPageClient() {
                 <tr
                   key={vehicle.id}
                   onClick={() => openViewSidebar(vehicle)}
-                  className="hover:bg-sky-50/40 transition-colors cursor-pointer"
+                  className="hover:bg-primary-50/40 transition-colors cursor-pointer"
                 >
                   <td className="py-3.5 font-bold text-slate-900 flex items-center gap-2">
-                    <Truck className="w-4 h-4 text-sky-600" /> {vehicle.registrationNumber}
+                    <Truck className="w-4 h-4 text-primary-600" /> {vehicle.registrationNumber}
                   </td>
                   <td className="py-3.5">
                     <p className="font-semibold text-slate-800">{vehicle.type}</p>
                     <p className="text-[10px] text-slate-500">{vehicle.model}</p>
                   </td>
-                  <td className="py-3.5 font-mono text-sky-600 font-semibold">{vehicle.gpsDeviceId || "N/A"}</td>
+                  <td className="py-3.5 font-mono text-primary-600 font-semibold">{vehicle.gpsDeviceId || "N/A"}</td>
                   <td className="py-3.5 font-medium">
                     {vehicle.insuranceExpiry ? new Date(vehicle.insuranceExpiry).toLocaleDateString("en-IN") : "N/A"}
                   </td>
@@ -837,7 +837,7 @@ export default function FleetPageClient() {
                           e.stopPropagation();
                           openViewSidebar(vehicle);
                         }}
-                        className="p-2 rounded-lg bg-sky-50 text-sky-600 hover:bg-sky-100 transition-colors"
+                        className="p-2 rounded-lg bg-primary-50 text-primary-600 hover:bg-primary-100 transition-colors"
                         title="View Details"
                       >
                         <Eye className="w-3.5 h-3.5" />
@@ -882,7 +882,7 @@ export default function FleetPageClient() {
       {(sidebarMode === "form" || sidebarMode === "edit" || sidebarMode === "view") && (
         <div className="fixed inset-0 z-50 flex justify-end overflow-hidden">
           <div className="absolute inset-0 bg-black/40" onClick={closeSidebar} />
-          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
+          <div className="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl flex flex-col animate-in slide-in- duration-300">
             <div className="flex items-center justify-between p-5 border-b border-slate-100 shrink-0">
               <h2 className="font-black text-base text-slate-900">
                 {sidebarMode === "form"

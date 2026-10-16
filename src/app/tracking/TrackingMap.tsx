@@ -101,7 +101,7 @@ export default function TrackingMap() {
         </p>
       </div>
 
-      <div className="bg-white rounded-3xl p-6 border border-sky-100 shadow-xl">
+      <div className="bg-white rounded-3xl p-6 border border-primary-100 shadow-xl">
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
             <Search className="absolute left-3.5 top-3 w-4 h-4 text-slate-400" />
@@ -111,12 +111,12 @@ export default function TrackingMap() {
               onChange={(e) => setTrackingInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleTrack()}
               placeholder="Enter Tracking Number or Vehicle No. (e.g. ALMS-8839210 or DL-01-AB-1234)"
-              className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 bg-slate-50 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
           <button
             onClick={handleTrack}
-            className="px-6 py-3 bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-xl text-xs font-black shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 hover:from-sky-500 hover:to-blue-500 transition-all"
+            className="px-6 py-3 bg-primary-600 text-white rounded-xl text-xs font-black shadow-lg shadow-primary-500/25 flex items-center justify-center gap-2  transition-all"
           >
             <Navigation className="w-4 h-4" />
             Track Now
@@ -128,9 +128,9 @@ export default function TrackingMap() {
         </div>
 
         {selectedVehicle && (
-          <div className="mt-4 bg-sky-50 rounded-2xl p-5 border border-sky-100">
+          <div className="mt-4 bg-primary-50 rounded-2xl p-5 border border-primary-100">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-600 to-blue-700 flex items-center justify-center text-white font-black text-sm shadow-lg shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-primary-600 flex items-center justify-center text-white font-black text-sm shadow-lg shrink-0">
                 {selectedVehicle.id.slice(0, 3)}
               </div>
               <div className="flex-1">
@@ -143,7 +143,7 @@ export default function TrackingMap() {
                       selectedVehicle.status === "in_transit"
                         ? "bg-emerald-100 text-emerald-700"
                         : selectedVehicle.status === "available"
-                        ? "bg-sky-100 text-sky-700"
+                        ? "bg-primary-100 text-primary-700"
                         : "bg-amber-100 text-amber-700"
                     }`}
                   >

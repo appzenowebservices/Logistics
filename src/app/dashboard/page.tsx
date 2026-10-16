@@ -39,7 +39,7 @@ export default function DashboardPage() {
     <DashboardLayout>
       {loading ? (
         <div className="flex items-center justify-center py-20">
-          <div className="w-8 h-8 rounded-full border-4 border-sky-600 border-t-transparent animate-spin" />
+          <div className="w-8 h-8 rounded-full border-4 border-primary-600 border-t-transparent animate-spin" />
         </div>
       ) : (
         <RoleDashboardEngine user={user} />
